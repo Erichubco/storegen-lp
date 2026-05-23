@@ -317,8 +317,8 @@
     </div>
 
     <div class="rounded-2xl border border-white/10 bg-ink-900/40 overflow-hidden">
-      <div class="text-center text-xs text-slate-500 px-4 pt-3 md:hidden">← Swipe pour voir →</div>
-      <div class="overflow-x-auto">
+      <!-- DESKTOP : table -->
+      <div class="hidden md:block overflow-x-auto">
         <table class="w-full text-sm">
           <thead class="bg-ink-900/80">
             <tr class="text-left">
@@ -330,391 +330,83 @@
             </tr>
           </thead>
           <tbody class="text-slate-300">
-            <tr class="border-t border-white/5">
-              <td class="px-5 py-3 font-medium">Temps de mise en ligne</td>
-              <td class="px-5 py-3 text-center text-accent-400 font-semibold">5 min</td>
-              <td class="px-5 py-3 text-center text-slate-500">15-30 min</td>
-              <td class="px-5 py-3 text-center text-slate-500">1-2 semaines</td>
-              <td class="px-5 py-3 text-center text-slate-500">2-4 semaines</td>
-            </tr>
-            <tr class="border-t border-white/5">
-              <td class="px-5 py-3 font-medium">Boutique 100 % adaptée au marché FR</td>
-              <td class="px-5 py-3 text-center text-accent-400">✓</td>
-              <td class="px-5 py-3 text-center text-slate-600">✗ (anglais par défaut)</td>
-              <td class="px-5 py-3 text-center text-slate-600">~</td>
-              <td class="px-5 py-3 text-center text-accent-400">✓</td>
-            </tr>
-            <tr class="border-t border-white/5">
-              <td class="px-5 py-3 font-medium">CGV / RGPD / mentions légales</td>
-              <td class="px-5 py-3 text-center text-accent-400">✓ inclus</td>
-              <td class="px-5 py-3 text-center text-slate-600">✗</td>
-              <td class="px-5 py-3 text-center text-slate-600">À faire</td>
-              <td class="px-5 py-3 text-center text-slate-500">+ devis</td>
-            </tr>
-            <tr class="border-t border-white/5">
-              <td class="px-5 py-3 font-medium">Sections éditables après build</td>
-              <td class="px-5 py-3 text-center text-accent-400">✓ libre</td>
-              <td class="px-5 py-3 text-center text-slate-600">~ limité</td>
-              <td class="px-5 py-3 text-center text-accent-400">✓</td>
-              <td class="px-5 py-3 text-center text-slate-500">Verrouillé</td>
-            </tr>
-            <tr class="border-t border-white/5">
-              <td class="px-5 py-3 font-medium">Boutique 100 % unique</td>
-              <td class="px-5 py-3 text-center text-accent-400">✓ (6 styles · 9 palettes)</td>
-              <td class="px-5 py-3 text-center text-slate-600">✗ (templates partagés)</td>
-              <td class="px-5 py-3 text-center text-accent-400">✓</td>
-              <td class="px-5 py-3 text-center text-accent-400">✓</td>
-            </tr>
-            <tr class="border-t border-white/5">
-              <td class="px-5 py-3 font-medium">Support FR humain</td>
-              <td class="px-5 py-3 text-center text-accent-400">✓</td>
-              <td class="px-5 py-3 text-center text-slate-600">✗ (chat IA EN)</td>
-              <td class="px-5 py-3 text-center text-slate-600">—</td>
-              <td class="px-5 py-3 text-center text-accent-400">✓</td>
-            </tr>
-            <tr class="border-t border-white/5">
-              <td class="px-5 py-3 font-medium">Coût total</td>
-              <td class="px-5 py-3 text-center text-accent-400 font-semibold">49 €/mois</td>
-              <td class="px-5 py-3 text-center text-slate-500">39 $/mois</td>
-              <td class="px-5 py-3 text-center text-slate-500">Gratuit · temps perdu</td>
-              <td class="px-5 py-3 text-center text-slate-500">1 500 — 5 000 €</td>
-            </tr>
+            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Temps de mise en ligne</td><td class="px-5 py-3 text-center text-accent-400 font-semibold">5 min</td><td class="px-5 py-3 text-center text-slate-500">15-30 min</td><td class="px-5 py-3 text-center text-slate-500">1-2 semaines</td><td class="px-5 py-3 text-center text-slate-500">2-4 semaines</td></tr>
+            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Boutique adaptée à ton marché</td><td class="px-5 py-3 text-center text-accent-400">✓</td><td class="px-5 py-3 text-center text-slate-600">✗ (anglais par défaut)</td><td class="px-5 py-3 text-center text-slate-600">~</td><td class="px-5 py-3 text-center text-accent-400">✓</td></tr>
+            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Pages légales incluses</td><td class="px-5 py-3 text-center text-accent-400">✓ inclus</td><td class="px-5 py-3 text-center text-slate-600">✗</td><td class="px-5 py-3 text-center text-slate-600">À faire</td><td class="px-5 py-3 text-center text-slate-500">+ devis</td></tr>
+            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Sections éditables après build</td><td class="px-5 py-3 text-center text-accent-400">✓ libre</td><td class="px-5 py-3 text-center text-slate-600">~ limité</td><td class="px-5 py-3 text-center text-accent-400">✓</td><td class="px-5 py-3 text-center text-slate-500">Verrouillé</td></tr>
+            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Boutique 100 % unique</td><td class="px-5 py-3 text-center text-accent-400">✓</td><td class="px-5 py-3 text-center text-slate-600">✗ (templates)</td><td class="px-5 py-3 text-center text-accent-400">✓</td><td class="px-5 py-3 text-center text-accent-400">✓</td></tr>
+            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Support humain</td><td class="px-5 py-3 text-center text-accent-400">✓</td><td class="px-5 py-3 text-center text-slate-600">✗ (chat IA EN)</td><td class="px-5 py-3 text-center text-slate-600">—</td><td class="px-5 py-3 text-center text-accent-400">✓</td></tr>
+            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Coût total</td><td class="px-5 py-3 text-center text-accent-400 font-semibold">49 €/mois</td><td class="px-5 py-3 text-center text-slate-500">39 $/mois</td><td class="px-5 py-3 text-center text-slate-500">Gratuit · temps perdu</td><td class="px-5 py-3 text-center text-slate-500">1 500 — 5 000 €</td></tr>
           </tbody>
         </table>
       </div>
+
+      <!-- MOBILE : 7 cards stackées (1 par critère) -->
+      <div class="md:hidden divide-y divide-white/5">
+        <div class="p-5">
+          <div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Temps de mise en ligne</div>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">5 min</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">15-30 min</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">1-2 semaines</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">2-4 semaines</span></div>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Boutique adaptée à ton marché</div>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗ anglais</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">~</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-accent-400">✓</span></div>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Pages légales incluses</div>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓ inclus</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">À faire</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">+ devis</span></div>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Sections éditables après build</div>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓ libre</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">~ limité</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-accent-400">✓</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">Verrouillé</span></div>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Boutique 100% unique</div>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗ templates</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-accent-400">✓</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-accent-400">✓</span></div>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Support humain</div>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗ chat IA EN</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">—</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-accent-400">✓</span></div>
+          </div>
+        </div>
+        <div class="p-5 bg-accent-500/5">
+          <div class="text-xs uppercase tracking-widest text-accent-300 mb-3">Coût total</div>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">49 €/mois</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">39 $/mois</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">Temps perdu</span></div>
+            <div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">1 500 — 5 000 €</span></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- TESTIMONIALS -->
-<section id="avis" class="relative bg-ink-900/40 border-y border-white/5">
-  <div class="max-w-6xl mx-auto px-6 py-24">
-    <div class="text-center mb-12">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/30 text-[11px] text-accent-300 uppercase tracking-widest font-semibold mb-5">Ce qu'en disent les premiers utilisateurs</div>
-      <h2 class="text-4xl md:text-5xl font-semibold tracking-tight gradient-text">
-        Ils ont arrêté de procrastiner.
-      </h2>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-5">
-      <div class="rounded-xl border border-white/10 bg-ink-900/60 p-6">
-        <div class="flex text-accent-400 text-sm mb-3">★★★★★</div>
-        <p class="text-slate-300 leading-relaxed mb-5">
-          "Ça faisait 8 mois que je procrastinais pour lancer ma boutique. En 1 h avec Storegen j'avais
-          ma première version live et brandée. Le truc qui m'a vraiment débloqué."
-        </p>
-        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
-          <div class="w-11 h-11 rounded-full overflow-hidden bg-ink-800 ring-1 ring-white/10"><img src="assets/avatars/leo.png" alt="Léo M." class="w-full h-full object-cover" /></div>
-          <div>
-            <div class="text-sm font-semibold text-white">Léo M.</div>
-            <div class="text-xs text-slate-500">Lyon · niche animaux</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="rounded-xl card-border p-6 relative">
-        <div class="absolute -top-3 left-6 px-2 py-0.5 rounded-full bg-accent-500 text-ink-950 text-[10px] font-semibold">COUP DE CŒUR</div>
-        <div class="flex text-accent-400 text-sm mb-3">★★★★★</div>
-        <p class="text-slate-200 leading-relaxed mb-5">
-          "J'ai monté ma boutique en 6 min avec Storegen. Quand mon mari a vu le résultat il a cru
-          que j'avais payé une agence à 2 000 €. Première vente le 3ᵉ jour."
-        </p>
-        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
-          <div class="w-11 h-11 rounded-full overflow-hidden bg-ink-800 ring-1 ring-white/10"><img src="assets/avatars/camille.png" alt="Camille B." class="w-full h-full object-cover" /></div>
-          <div>
-            <div class="text-sm font-semibold text-white">Camille B.</div>
-            <div class="text-xs text-slate-500">Bordeaux · niche beauté</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="rounded-xl border border-white/10 bg-ink-900/60 p-6">
-        <div class="flex text-accent-400 text-sm mb-3">★★★★★</div>
-        <p class="text-slate-300 leading-relaxed mb-5">
-          "6 mois que je voulais lancer ma boutique, j'y arrivais pas. En une après-midi avec Storegen
-          c'était bouclé. Premier acheteur la semaine d'après. Vraiment, ça change tout."
-        </p>
-        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
-          <div class="w-11 h-11 rounded-full overflow-hidden bg-ink-800 ring-1 ring-white/10"><img src="assets/avatars/yanis.png" alt="Yanis R." class="w-full h-full object-cover" /></div>
-          <div>
-            <div class="text-sm font-semibold text-white">Yanis R.</div>
-            <div class="text-xs text-slate-500">Toulouse · niche tech</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing" class="relative">
-  <div class="max-w-5xl mx-auto px-6 py-24">
-    <div class="text-center mb-16">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/30 text-[11px] text-accent-300 uppercase tracking-widest font-semibold mb-5">Tarifs</div>
-      <h2 class="text-4xl md:text-5xl font-semibold tracking-tight">
-        <span class="gradient-text">Teste gratuitement.</span> <span class="serif italic text-slate-400">Tu décides ensuite.</span>
-      </h2>
-    </div>
-
-    <!-- Toggle mensuel / annuel -->
-    <div class="flex items-center justify-center gap-3 mb-10">
-      <span class="text-sm text-slate-400" id="lbl-mensuel">Mensuel</span>
-      <button id="billing-toggle" type="button" class="relative inline-flex h-7 w-14 items-center rounded-full bg-ink-700 transition" aria-label="Basculer mensuel / annuel">
-        <span id="toggle-knob" class="inline-block h-5 w-5 transform rounded-full bg-accent-500 transition translate-x-1"></span>
-      </button>
-      <span class="text-sm text-white font-medium" id="lbl-annuel">Annuel <span class="text-accent-400">· -17%</span></span>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <div class="rounded-2xl border border-white/10 bg-ink-900/60 p-8">
-        <div class="mb-6">
-          <div class="text-sm text-slate-400 mb-2">Essai 7 jours</div>
-          <div class="flex items-baseline gap-1">
-            <span class="text-5xl font-semibold">0 €</span>
-            <span class="text-slate-500 text-sm">/ pendant 7 jours</span>
-          </div>
-        </div>
-        <ul class="space-y-3 text-sm text-slate-300 mb-8">
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Accès complet à tout l'outil</li>
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Toutes les fonctionnalités Pro</li>
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> CB demandée — non facturée pendant 7 jours</li>
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Annulable à tout moment</li>
-        </ul>
-        <button class="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 transition text-sm font-medium">Démarrer l'essai 7 jours</button>
-        <div class="text-center text-[11px] text-slate-500 mt-3">↩ Annulable avant J+8 pour ne rien payer</div>
-      </div>
-
-      <div class="rounded-2xl card-border p-8 relative">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-accent-500 text-ink-950 text-xs font-semibold">LE PLUS POPULAIRE</div>
-        <div class="mb-6">
-          <div class="text-sm text-accent-400 mb-2">Pro · après l'essai</div>
-          <div class="flex items-baseline gap-1">
-            <span class="text-5xl font-semibold" data-price-mensuel="49 €" data-price-annuel="41 €">49 €</span>
-            <span class="text-slate-500 text-sm" data-suffix-mensuel="/ mois" data-suffix-annuel="/ mois (490€/an)">/ mois</span>
-          </div>
-        </div>
-        <ul class="space-y-3 text-sm text-slate-300 mb-8">
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 1 boutique active</li>
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Régénération illimitée</li>
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Compatible apps Shopify</li>
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Sections premium · 6 styles</li>
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Support FR prioritaire</li>
-        </ul>
-        <button class="w-full py-3 rounded-xl bg-accent-500 text-ink-950 hover:bg-accent-400 transition text-sm font-semibold">Démarrer l'essai</button>
-        <div class="text-center text-[11px] text-slate-500 mt-3">↩ Annulable à tout moment</div>
-      </div>
-
-      <div class="rounded-2xl border border-white/10 bg-ink-900/60 p-8">
-        <div class="mb-6">
-          <div class="text-sm text-slate-400 mb-2">Agence</div>
-          <div class="flex items-baseline gap-1">
-            <span class="text-5xl font-semibold" data-price-mensuel="149 €" data-price-annuel="124 €">149 €</span>
-            <span class="text-slate-500 text-sm" data-suffix-mensuel="/ mois" data-suffix-annuel="/ mois (1490€/an)">/ mois</span>
-          </div>
-        </div>
-        <ul class="space-y-3 text-sm text-slate-300 mb-8">
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Tout le plan Pro</li>
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Jusqu'à 5 boutiques en parallèle</li>
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Marques multi-comptes</li>
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Support dédié premium</li>
-          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Multi-comptes utilisateurs</li>
-        </ul>
-        <button class="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 transition text-sm font-medium">Démarrer l'essai</button>
-        <div class="text-center text-[11px] text-slate-500 mt-3">↩ Annulable à tout moment</div>
-      </div>
-    </div>
-
-    <script>
-      (function() {
-        const toggle = document.getElementById('billing-toggle');
-        const knob = document.getElementById('toggle-knob');
-        const lblM = document.getElementById('lbl-mensuel');
-        const lblA = document.getElementById('lbl-annuel');
-        let isAnnual = true;
-        function update() {
-          knob.style.transform = isAnnual ? 'translateX(28px)' : 'translateX(4px)';
-          lblM.classList.toggle('text-white', !isAnnual);
-          lblM.classList.toggle('font-medium', !isAnnual);
-          lblM.classList.toggle('text-slate-400', isAnnual);
-          lblA.classList.toggle('text-white', isAnnual);
-          lblA.classList.toggle('text-slate-400', !isAnnual);
-          document.querySelectorAll('[data-price-mensuel]').forEach(el => {
-            el.textContent = isAnnual ? el.dataset.priceAnnuel : el.dataset.priceMensuel;
-          });
-          document.querySelectorAll('[data-suffix-mensuel]').forEach(el => {
-            el.textContent = isAnnual ? el.dataset.suffixAnnuel : el.dataset.suffixMensuel;
-          });
-        }
-        toggle.addEventListener('click', () => { isAnnual = !isAnnual; update(); });
-        update();
-      })();
-    </script>
-    <p class="text-center text-sm text-slate-500 mt-8">CB demandée à l'inscription mais non facturée pendant 7 jours. Passage automatique à 49 €/mois (ou 41 €/mois en annuel) ensuite. Annulable à tout moment dans l'espace client.</p>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="relative bg-ink-900/40 border-y border-white/5">
-  <div class="max-w-3xl mx-auto px-6 py-24">
-    <div class="text-center mb-12">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/30 text-[11px] text-accent-300 uppercase tracking-widest font-semibold mb-5">FAQ</div>
-      <h2 class="text-4xl md:text-5xl font-semibold tracking-tight gradient-text">Les questions qu'on nous pose.</h2>
-    </div>
-
-    <div class="space-y-3">
-      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="font-medium">Suis-je facturé pendant l'essai de 7 jours ?</span>
-          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <p class="mt-4 text-slate-400 leading-relaxed">Non. Ta carte bancaire est demandée à l'inscription pour valider ton identité, mais aucun débit n'est effectué pendant les 7 jours. Si tu annules avant la fin de la période d'essai, rien ne te sera facturé. Au jour 8, ton abonnement Pro à 49 €/mois démarre automatiquement.</p>
-      </details>
-      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="font-medium">Que se passe-t-il si j'arrête l'abonnement ?</span>
-          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <p class="mt-4 text-slate-400 leading-relaxed">Tu perds l'accès aux templates générés et au tool. Tes produits et tes commandes Shopify restent intacts, mais le design des pages produits/homepage revient à la version basique de ton thème Shopify. Tu peux te réabonner à tout moment pour récupérer l'accès.</p>
-      </details>
-      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="font-medium">Faut une boutique Shopify déjà existante ?</span>
-          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <p class="mt-4 text-slate-400 leading-relaxed">Oui. Il te faut un compte Shopify (essai 1 € le premier mois). Storegen se connecte à ta boutique pour la construire, il n'en crée pas une nouvelle à ta place.</p>
-      </details>
-      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="font-medium">Et si j'ai pas encore d'URL de winner ?</span>
-          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <p class="mt-4 text-slate-400 leading-relaxed">On lance bientôt un feed de winners curés chaque semaine. En attendant, n'importe quelle page produit Shopify d'un concurrent fait l'affaire.</p>
-      </details>
-      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="font-medium">Si je clone le même produit qu'un autre user, on aura la même boutique ?</span>
-          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <p class="mt-4 text-slate-400 leading-relaxed">Non. 6 styles, 9 palettes, génération d'images uniques, copy IA qui varie. Même URL = boutiques visuellement différentes, garanti.</p>
-      </details>
-      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="font-medium">Est-ce compatible avec mes apps Shopify ?</span>
-          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <p class="mt-4 text-slate-400 leading-relaxed">Oui, totalement. Klaviyo, Loox, Judge.me, Vitals, Recharge — tu peux ajouter toutes les apps Shopify que tu veux, elles s'intègrent dans les sections générées sans casser le design.</p>
-      </details>
-      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="font-medium">Et le copyright si je clone un concurrent ?</span>
-          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <p class="mt-4 text-slate-400 leading-relaxed">L'IA ne recopie jamais texto. Elle analyse la structure (ce qui marche) et réécrit tout en français, avec des images régénérées propres. Ta boutique est légalement et techniquement la tienne.</p>
-      </details>
-      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="font-medium">Mes données sont en sécurité ?</span>
-          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <p class="mt-4 text-slate-400 leading-relaxed">Accès temporaire à ta boutique pour la construire. Aucune donnée client n'est stockée chez nous. Tu peux révoquer l'accès dans Shopify en un clic.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="relative overflow-hidden">
-  <div class="glow-orb bg-accent-500 w-[500px] h-[500px] -bottom-40 left-1/2 -translate-x-1/2 opacity-20"></div>
-  <div class="relative max-w-3xl mx-auto px-6 py-24 text-center">
-    <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
-      <span class="gradient-text">Et si dans 5 minutes</span><br/>
-      <span class="serif italic text-accent-400">ta boutique était live ?</span>
-    </h2>
-    <p class="text-lg text-slate-400 mb-10">
-      Une URL. 5 minutes. Ta boutique est prête. 7 jours pour tester, annulable à tout moment.
-    </p>
-
-    <form class="max-w-xl mx-auto mb-6">
-      <div class="flex flex-col sm:flex-row gap-2 p-2 rounded-2xl bg-ink-900/80 border border-white/10 backdrop-blur shadow-[0_0_40px_rgba(245,158,11,0.08)]">
-        <div class="flex items-center gap-2 px-3 flex-1">
-          <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-          <input type="url" placeholder="https://winning-store.com/products/..." class="flex-1 bg-transparent outline-none text-base placeholder:text-slate-600 py-2"/>
-        </div>
-        <button type="button" class="px-6 py-3 rounded-xl bg-accent-500 text-ink-950 font-medium text-base hover:bg-accent-400 transition whitespace-nowrap">Construire en 5 min →</button>
-      </div>
-    </form>
-    <div class="text-sm text-slate-500">5 minutes · 7 jours offerts · Annulable à tout moment</div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="border-t border-white/5 bg-ink-900/40">
-  <div class="max-w-6xl mx-auto px-6 py-16">
-
-    <!-- Newsletter -->
-    <div class="grid md:grid-cols-2 gap-8 mb-12 pb-12 border-b border-white/5">
-      <div>
-        <h3 class="text-2xl font-semibold mb-2">
-          <span class="gradient-text">Reçois</span> <span class="serif italic text-accent-400">les nouveautés.</span>
-        </h3>
-        <p class="text-slate-400 text-sm">Nouvelles features, exemples de boutiques générées, astuces. Pas de spam.</p>
-      </div>
-      <form class="flex gap-2 self-end" onsubmit="event.preventDefault()">
-        <input type="email" placeholder="ton@email.com" class="flex-1 px-4 py-3 rounded-xl bg-ink-900 border border-white/10 outline-none focus:border-accent-400 text-sm" />
-        <button class="px-6 py-3 rounded-xl bg-accent-500 text-ink-950 font-semibold text-sm hover:bg-accent-400 transition">S'inscrire</button>
-      </form>
-    </div>
-
-    <!-- Links grid -->
-    <div class="grid md:grid-cols-5 gap-8 mb-12">
-      <div class="md:col-span-2">
-        <div class="flex items-center gap-2 mb-4">
-          <span style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 26px; letter-spacing: -0.035em; line-height: 1;">store<span style="color: #F59E0B;">gen.</span></span>
-        </div>
-        <p class="text-sm text-slate-400 leading-relaxed max-w-xs">
-          Ta boutique e-commerce, prête en 5 minutes. Pour les entrepreneurs qui veulent vendre, sans la galère du setup.
-        </p>
-        
-      </div>
-      <div>
-        <div class="text-xs uppercase tracking-widest text-slate-500 mb-4">Produit</div>
-        <ul class="space-y-2 text-sm text-slate-300">
-          <li><a href="#styles" class="hover:text-white transition">6 styles</a></li>
-          <li><a href="#comment-ca-marche" class="hover:text-white transition">Comment ça marche</a></li>
-          <li><a href="#pricing" class="hover:text-white transition">Tarifs</a></li>
-          <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="text-xs uppercase tracking-widest text-slate-500 mb-4">Ressources</div>
-        <ul class="space-y-2 text-sm text-slate-300">
-          <li><a href="#" class="hover:text-white transition">Blog</a></li>
-          <li><a href="#" class="hover:text-white transition">Centre d'aide</a></li>
-          <li><a href="#" class="hover:text-white transition">Programme d'affiliation</a></li>
-          <li><a href="#" class="hover:text-white transition">Affiliation Shopify</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="text-xs uppercase tracking-widest text-slate-500 mb-4">Légal</div>
-        <ul class="space-y-2 text-sm text-slate-300">
-          <li><a href="#" class="hover:text-white transition">Mentions légales</a></li>
-          <li><a href="#" class="hover:text-white transition">CGV</a></li>
-          <li><a href="#" class="hover:text-white transition">Confidentialité</a></li>
-          <li><a href="#" class="hover:text-white transition">Cookies</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom bar -->
-    <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-white/5">
-      <div class="text-xs text-slate-500">© 2026 Storegen</div>
-      <div class="flex items-center gap-3 text-xs text-slate-500">
-        <span>Compatible</span>
-        <span class="px-2 py-1 rounded border border-white/10 text-slate-400">Shopify</span>
-      </div>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
