@@ -61,7 +61,7 @@
 <!-- NAV -->
 <header class="relative z-50">
   <nav class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-    <a href="#" class="flex items-center gap-2">
+    <a href="#top" class="flex items-center gap-2">
       <span style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 26px; letter-spacing: -0.035em; line-height: 1;">store<span style="color: #F59E0B;">gen.</span></span>
     </a>
     <div class="hidden md:flex items-center gap-8 text-sm text-slate-400">
@@ -71,8 +71,8 @@
       <a href="#pricing" class="hover:text-white transition">Tarifs</a>
     </div>
     <div class="flex items-center gap-3">
-      <a href="#" class="hidden sm:inline text-sm text-slate-400 hover:text-white transition">Connexion</a>
-      <a href="#hero-input" class="px-4 py-2 rounded-lg bg-white text-ink-950 text-sm font-medium hover:bg-slate-200 transition">Commencer</a>
+      <a href="https://storegen-app.vercel.app/login" class="hidden sm:inline text-sm text-slate-400 hover:text-white transition">Connexion</a>
+      <a href="https://storegen-app.vercel.app/" class="px-4 py-2 rounded-lg bg-white text-ink-950 text-sm font-medium hover:bg-slate-200 transition">Commencer</a>
       <button onclick="document.getElementById('mobile-nav').classList.toggle('hidden')" class="md:hidden w-10 h-10 rounded-lg border border-white/15 bg-white/5 text-white hover:bg-white/10 flex items-center justify-center transition" aria-label="Menu">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
@@ -84,7 +84,7 @@
       <a href="#comment-ca-marche" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="py-2 hover:text-white">Comment ça marche</a>
       <a href="#avis" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="py-2 hover:text-white">Avis</a>
       <a href="#pricing" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="py-2 hover:text-white">Tarifs</a>
-      <a href="#" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="py-2 hover:text-white border-t border-white/10 pt-3">Connexion</a>
+      <a href="https://storegen-app.vercel.app/login" class="py-2 hover:text-white border-t border-white/10 pt-3">Connexion</a>
     </div>
   </div>
 </header>
@@ -112,14 +112,14 @@
       Tu te concentres sur les ventes.
     </p>
 
-    <!-- URL INPUT -->
-    <form id="hero-input" class="max-w-xl mx-auto mb-6">
+    <!-- URL INPUT — redirige vers l'app avec l'URL pré-remplie -->
+    <form id="hero-input" class="max-w-xl mx-auto mb-6" onsubmit="event.preventDefault(); const u=this.querySelector('input').value.trim(); window.location.href = 'https://storegen-app.vercel.app/' + (u ? '?prefill=' + encodeURIComponent(u) : '');">
       <div class="flex flex-col sm:flex-row gap-2 p-2 rounded-2xl bg-ink-900/80 border border-white/10 backdrop-blur shadow-[0_0_40px_rgba(245,158,11,0.08)]">
         <div class="flex items-center gap-2 px-3 flex-1">
           <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
           <input type="url" placeholder="https://winning-store.com/products/..." class="flex-1 bg-transparent outline-none text-base placeholder:text-slate-600 py-2"/>
         </div>
-        <button type="button" class="px-6 py-3 rounded-xl bg-accent-500 text-ink-950 font-medium text-base hover:bg-accent-400 transition whitespace-nowrap">
+        <button type="submit" class="px-6 py-3 rounded-xl bg-accent-500 text-ink-950 font-medium text-base hover:bg-accent-400 transition whitespace-nowrap">
           Construire en 5 min →
         </button>
       </div>
@@ -168,7 +168,7 @@
 
 <!-- COMMENT ÇA MARCHE -->
 <section id="comment-ca-marche" class="relative">
-  <div class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-6 py-10 md:py-24">
     <div class="text-center mb-16">
       <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/30 text-[11px] text-accent-300 uppercase tracking-widest font-semibold mb-5">Comment ça marche</div>
       <h2 class="text-4xl md:text-5xl font-semibold tracking-tight">
@@ -198,7 +198,7 @@
 
 <!-- STYLES GALLERY -->
 <section id="styles" class="relative bg-ink-900/40 border-y border-white/5">
-  <div class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-6 py-10 md:py-24">
     <div class="text-center mb-12">
       <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/30 text-[11px] text-accent-300 uppercase tracking-widest font-semibold mb-5">6 styles disponibles</div>
       <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
@@ -241,7 +241,7 @@
 
 <!-- POURQUOI CET OUTIL -->
 <section class="relative">
-  <div class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+  <div class="max-w-4xl mx-auto px-6 py-10 md:py-24">
     <div class="text-center mb-12">
       <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/30 text-[11px] text-accent-300 uppercase tracking-widest font-semibold mb-5">Pourquoi cet outil existe</div>
       <h2 class="text-4xl md:text-5xl font-semibold tracking-tight gradient-text">
@@ -323,11 +323,11 @@
 
 <!-- COMPARISON vs alternatives -->
 <section class="relative">
-  <div class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-6 py-10 md:py-24">
     <div class="text-center mb-12">
       <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/30 text-[11px] text-accent-300 uppercase tracking-widest font-semibold mb-5">Comparaison</div>
       <h2 class="text-4xl md:text-5xl font-semibold tracking-tight">
-        <span class="gradient-text">Storegen</span> <span class="serif italic text-slate-400">vs</span> <span class="gradient-text">les autres options.</span>
+        <span style="font-family: 'Satoshi', sans-serif; font-weight: 900; letter-spacing: -0.035em;">store<span style="color: #F59E0B;">gen.</span></span> <span class="serif italic text-slate-400">vs</span> <span class="gradient-text">les autres options.</span>
       </h2>
     </div>
 
@@ -378,13 +378,13 @@
 
       <!-- MOBILE : cards stackées -->
       <div class="md:hidden divide-y divide-white/5">
-        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Temps de mise en ligne</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">5 min</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">15-30 min</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">1-2 semaines</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">2-4 semaines</span></div></div></div>
-        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Boutique adaptée à ton marché</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗ anglais</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">~</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-accent-400">✓</span></div></div></div>
-        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Pages légales incluses</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓ inclus</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">À faire</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">+ devis</span></div></div></div>
-        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Sections éditables après build</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓ libre</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">~ limité</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-accent-400">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">Verrouillé</span></div></div></div>
-        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Boutique 100% unique</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗ templates</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-accent-400">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-accent-400">✓</span></div></div></div>
-        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Support humain</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗ chat IA EN</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">—</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-accent-400">✓</span></div></div></div>
-        <div class="p-5 bg-accent-500/5"><div class="text-xs uppercase tracking-widest text-accent-300 mb-3">Coût total</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">49 €/mois</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">39 $/mois</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">Temps perdu</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">1 500 — 5 000 €</span></div></div></div>
+        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Temps de mise en ligne</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 14px; letter-spacing: -0.03em;">store<span style="color: #F59E0B;">gen.</span></span><span class="text-accent-400 font-bold">5 min</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">15-30 min</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">1-2 semaines</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">2-4 semaines</span></div></div></div>
+        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Boutique adaptée à ton marché</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 14px; letter-spacing: -0.03em;">store<span style="color: #F59E0B;">gen.</span></span><span class="text-accent-400 font-bold">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗ anglais</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">~</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-accent-400">✓</span></div></div></div>
+        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Pages légales incluses</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 14px; letter-spacing: -0.03em;">store<span style="color: #F59E0B;">gen.</span></span><span class="text-accent-400 font-bold">✓ inclus</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">À faire</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">+ devis</span></div></div></div>
+        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Sections éditables après build</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 14px; letter-spacing: -0.03em;">store<span style="color: #F59E0B;">gen.</span></span><span class="text-accent-400 font-bold">✓ libre</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">~ limité</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-accent-400">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">Verrouillé</span></div></div></div>
+        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Boutique 100% unique</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 14px; letter-spacing: -0.03em;">store<span style="color: #F59E0B;">gen.</span></span><span class="text-accent-400 font-bold">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗ templates</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-accent-400">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-accent-400">✓</span></div></div></div>
+        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Support humain</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 14px; letter-spacing: -0.03em;">store<span style="color: #F59E0B;">gen.</span></span><span class="text-accent-400 font-bold">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗ chat IA EN</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">—</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-accent-400">✓</span></div></div></div>
+        <div class="p-5 bg-accent-500/5"><div class="text-xs uppercase tracking-widest text-accent-300 mb-3">Coût total</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 14px; letter-spacing: -0.03em;">store<span style="color: #F59E0B;">gen.</span></span><span class="text-accent-400 font-bold">49 €/mois</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">39 $/mois</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">Temps perdu</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">1 500 — 5 000 €</span></div></div></div>
       </div>
     </div>
   </div>
@@ -392,7 +392,7 @@
 
 <!-- TESTIMONIALS -->
 <section id="avis" class="relative bg-ink-900/40 border-y border-white/5">
-  <div class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-6 py-10 md:py-24">
     <div class="text-center mb-12">
       <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/30 text-[11px] text-accent-300 uppercase tracking-widest font-semibold mb-5">Ce qu'en disent les premiers utilisateurs</div>
       <h2 class="text-4xl md:text-5xl font-semibold tracking-tight gradient-text">
@@ -452,7 +452,7 @@
 
 <!-- PRICING -->
 <section id="pricing" class="relative">
-  <div class="max-w-5xl mx-auto px-6 py-16 md:py-24">
+  <div class="max-w-5xl mx-auto px-6 py-10 md:py-24">
     <div class="text-center mb-16">
       <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/30 text-[11px] text-accent-300 uppercase tracking-widest font-semibold mb-5">Tarifs</div>
       <h2 class="text-4xl md:text-5xl font-semibold tracking-tight">
@@ -484,7 +484,7 @@
           <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> CB demandée — non facturée pendant 7 jours</li>
           <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Annulable à tout moment</li>
         </ul>
-        <button class="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 transition text-sm font-medium">Démarrer l'essai 7 jours</button>
+        <a href="https://storegen-app.vercel.app/signup" class="block w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 transition text-sm font-medium text-center">Démarrer l'essai 7 jours</a>
         <div class="text-center text-[11px] text-slate-500 mt-3">↩ Annulable avant J+8 pour ne rien payer</div>
       </div>
 
@@ -504,7 +504,7 @@
           <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Sections premium · 6 styles</li>
           <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Support FR prioritaire</li>
         </ul>
-        <button class="w-full py-3 rounded-xl bg-accent-500 text-ink-950 hover:bg-accent-400 transition text-sm font-semibold">Démarrer l'essai</button>
+        <a href="https://storegen-app.vercel.app/signup" class="block w-full py-3 rounded-xl bg-accent-500 text-ink-950 hover:bg-accent-400 transition text-sm font-semibold text-center">Démarrer l'essai</a>
         <div class="text-center text-[11px] text-slate-500 mt-3">↩ Annulable à tout moment</div>
       </div>
 
@@ -523,7 +523,7 @@
           <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Support dédié premium</li>
           <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Multi-comptes utilisateurs</li>
         </ul>
-        <button class="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 transition text-sm font-medium">Démarrer l'essai</button>
+        <a href="https://storegen-app.vercel.app/signup" class="block w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 transition text-sm font-medium text-center">Démarrer l'essai</a>
         <div class="text-center text-[11px] text-slate-500 mt-3">↩ Annulable à tout moment</div>
       </div>
     </div>
@@ -559,7 +559,7 @@
 
 <!-- FAQ -->
 <section id="faq" class="relative bg-ink-900/40 border-y border-white/5">
-  <div class="max-w-3xl mx-auto px-6 py-16 md:py-24">
+  <div class="max-w-3xl mx-auto px-6 py-10 md:py-24">
     <div class="text-center mb-12">
       <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/30 text-[11px] text-accent-300 uppercase tracking-widest font-semibold mb-5">FAQ</div>
       <h2 class="text-4xl md:text-5xl font-semibold tracking-tight gradient-text">Les questions qu'on nous pose.</h2>
@@ -629,7 +629,7 @@
 <!-- CTA FINAL -->
 <section class="relative overflow-hidden">
   <div class="glow-orb bg-accent-500 w-[500px] h-[500px] -bottom-40 left-1/2 -translate-x-1/2 opacity-20"></div>
-  <div class="relative max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
+  <div class="relative max-w-3xl mx-auto px-6 py-10 md:py-24 text-center">
     <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
       <span class="gradient-text">Et si dans 5 minutes</span><br/>
       <span class="serif italic text-accent-400">ta boutique était live ?</span>
@@ -638,13 +638,13 @@
       Une URL. 5 minutes. Ta boutique est prête. 7 jours pour tester, annulable à tout moment.
     </p>
 
-    <form class="max-w-xl mx-auto mb-6">
+    <form class="max-w-xl mx-auto mb-6" onsubmit="event.preventDefault(); const u=this.querySelector('input').value.trim(); window.location.href = 'https://storegen-app.vercel.app/' + (u ? '?prefill=' + encodeURIComponent(u) : '');">
       <div class="flex flex-col sm:flex-row gap-2 p-2 rounded-2xl bg-ink-900/80 border border-white/10 backdrop-blur shadow-[0_0_40px_rgba(245,158,11,0.08)]">
         <div class="flex items-center gap-2 px-3 flex-1">
           <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
           <input type="url" placeholder="https://winning-store.com/products/..." class="flex-1 bg-transparent outline-none text-base placeholder:text-slate-600 py-2"/>
         </div>
-        <button type="button" class="px-6 py-3 rounded-xl bg-accent-500 text-ink-950 font-medium text-base hover:bg-accent-400 transition whitespace-nowrap">Construire en 5 min →</button>
+        <button type="submit" class="px-6 py-3 rounded-xl bg-accent-500 text-ink-950 font-medium text-base hover:bg-accent-400 transition whitespace-nowrap">Construire en 5 min →</button>
       </div>
     </form>
     <div class="text-sm text-slate-500">5 minutes · 7 jours offerts · Annulable à tout moment</div>
@@ -692,19 +692,18 @@
       <div>
         <div class="text-xs uppercase tracking-widest text-slate-500 mb-4">Ressources</div>
         <ul class="space-y-2 text-sm text-slate-300">
-          <li><a href="#" class="hover:text-white transition">Blog</a></li>
-          <li><a href="#" class="hover:text-white transition">Centre d'aide</a></li>
-          <li><a href="#" class="hover:text-white transition">Programme d'affiliation</a></li>
-          <li><a href="#" class="hover:text-white transition">Affiliation Shopify</a></li>
+          <li><a href="https://storegen-app.vercel.app/contact" class="hover:text-white transition">Centre d'aide</a></li>
+          <li><a href="https://storegen-app.vercel.app/contact" class="hover:text-white transition">Contact support</a></li>
+          <li><a href="https://storegen-app.vercel.app/signup" class="hover:text-white transition">Programme d'affiliation</a></li>
         </ul>
       </div>
       <div class="col-span-2 md:col-span-1">
         <div class="text-xs uppercase tracking-widest text-slate-500 mb-4">Légal</div>
         <ul class="space-y-2 text-sm text-slate-300">
-          <li><a href="#" class="hover:text-white transition">Mentions légales</a></li>
-          <li><a href="#" class="hover:text-white transition">CGV</a></li>
-          <li><a href="#" class="hover:text-white transition">Confidentialité</a></li>
-          <li><a href="#" class="hover:text-white transition">Cookies</a></li>
+          <li><a href="https://storegen-app.vercel.app/mentions" class="hover:text-white transition">Mentions légales</a></li>
+          <li><a href="https://storegen-app.vercel.app/cgv" class="hover:text-white transition">CGV</a></li>
+          <li><a href="https://storegen-app.vercel.app/confidentialite" class="hover:text-white transition">Confidentialité</a></li>
+          <li><a href="https://storegen-app.vercel.app/confidentialite" class="hover:text-white transition">Cookies</a></li>
         </ul>
       </div>
     </div>
