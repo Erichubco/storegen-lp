@@ -317,8 +317,8 @@
     </div>
 
     <div class="rounded-2xl border border-white/10 bg-ink-900/40 overflow-hidden">
-      <!-- DESKTOP : table -->
-      <div class="hidden md:block overflow-x-auto">
+      <div class="text-center text-xs text-slate-500 px-4 pt-3 md:hidden">← Swipe pour voir →</div>
+      <div class="overflow-x-auto">
         <table class="w-full text-sm">
           <thead class="bg-ink-900/80">
             <tr class="text-left">
@@ -330,26 +330,57 @@
             </tr>
           </thead>
           <tbody class="text-slate-300">
-            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Temps de mise en ligne</td><td class="px-5 py-3 text-center text-accent-400 font-semibold">5 min</td><td class="px-5 py-3 text-center text-slate-500">15-30 min</td><td class="px-5 py-3 text-center text-slate-500">1-2 semaines</td><td class="px-5 py-3 text-center text-slate-500">2-4 semaines</td></tr>
-            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Boutique adaptée à ton marché</td><td class="px-5 py-3 text-center text-accent-400">✓</td><td class="px-5 py-3 text-center text-slate-600">✗ (anglais par défaut)</td><td class="px-5 py-3 text-center text-slate-600">~</td><td class="px-5 py-3 text-center text-accent-400">✓</td></tr>
-            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Pages légales incluses</td><td class="px-5 py-3 text-center text-accent-400">✓ inclus</td><td class="px-5 py-3 text-center text-slate-600">✗</td><td class="px-5 py-3 text-center text-slate-600">À faire</td><td class="px-5 py-3 text-center text-slate-500">+ devis</td></tr>
-            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Sections éditables après build</td><td class="px-5 py-3 text-center text-accent-400">✓ libre</td><td class="px-5 py-3 text-center text-slate-600">~ limité</td><td class="px-5 py-3 text-center text-accent-400">✓</td><td class="px-5 py-3 text-center text-slate-500">Verrouillé</td></tr>
-            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Boutique 100 % unique</td><td class="px-5 py-3 text-center text-accent-400">✓</td><td class="px-5 py-3 text-center text-slate-600">✗ (templates)</td><td class="px-5 py-3 text-center text-accent-400">✓</td><td class="px-5 py-3 text-center text-accent-400">✓</td></tr>
-            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Support humain</td><td class="px-5 py-3 text-center text-accent-400">✓</td><td class="px-5 py-3 text-center text-slate-600">✗ (chat IA EN)</td><td class="px-5 py-3 text-center text-slate-600">—</td><td class="px-5 py-3 text-center text-accent-400">✓</td></tr>
-            <tr class="border-t border-white/5"><td class="px-5 py-3 font-medium">Coût total</td><td class="px-5 py-3 text-center text-accent-400 font-semibold">49 €/mois</td><td class="px-5 py-3 text-center text-slate-500">39 $/mois</td><td class="px-5 py-3 text-center text-slate-500">Gratuit · temps perdu</td><td class="px-5 py-3 text-center text-slate-500">1 500 — 5 000 €</td></tr>
+            <tr class="border-t border-white/5">
+              <td class="px-5 py-3 font-medium">Temps de mise en ligne</td>
+              <td class="px-5 py-3 text-center text-accent-400 font-semibold">5 min</td>
+              <td class="px-5 py-3 text-center text-slate-500">15-30 min</td>
+              <td class="px-5 py-3 text-center text-slate-500">1-2 semaines</td>
+              <td class="px-5 py-3 text-center text-slate-500">2-4 semaines</td>
+            </tr>
+            <tr class="border-t border-white/5">
+              <td class="px-5 py-3 font-medium">Boutique 100 % adaptée au marché FR</td>
+              <td class="px-5 py-3 text-center text-accent-400">✓</td>
+              <td class="px-5 py-3 text-center text-slate-600">✗ (anglais par défaut)</td>
+              <td class="px-5 py-3 text-center text-slate-600">~</td>
+              <td class="px-5 py-3 text-center text-accent-400">✓</td>
+            </tr>
+            <tr class="border-t border-white/5">
+              <td class="px-5 py-3 font-medium">CGV / RGPD / mentions légales</td>
+              <td class="px-5 py-3 text-center text-accent-400">✓ inclus</td>
+              <td class="px-5 py-3 text-center text-slate-600">✗</td>
+              <td class="px-5 py-3 text-center text-slate-600">À faire</td>
+              <td class="px-5 py-3 text-center text-slate-500">+ devis</td>
+            </tr>
+            <tr class="border-t border-white/5">
+              <td class="px-5 py-3 font-medium">Sections éditables après build</td>
+              <td class="px-5 py-3 text-center text-accent-400">✓ libre</td>
+              <td class="px-5 py-3 text-center text-slate-600">~ limité</td>
+              <td class="px-5 py-3 text-center text-accent-400">✓</td>
+              <td class="px-5 py-3 text-center text-slate-500">Verrouillé</td>
+            </tr>
+            <tr class="border-t border-white/5">
+              <td class="px-5 py-3 font-medium">Boutique 100 % unique</td>
+              <td class="px-5 py-3 text-center text-accent-400">✓ (6 styles · 9 palettes)</td>
+              <td class="px-5 py-3 text-center text-slate-600">✗ (templates partagés)</td>
+              <td class="px-5 py-3 text-center text-accent-400">✓</td>
+              <td class="px-5 py-3 text-center text-accent-400">✓</td>
+            </tr>
+            <tr class="border-t border-white/5">
+              <td class="px-5 py-3 font-medium">Support FR humain</td>
+              <td class="px-5 py-3 text-center text-accent-400">✓</td>
+              <td class="px-5 py-3 text-center text-slate-600">✗ (chat IA EN)</td>
+              <td class="px-5 py-3 text-center text-slate-600">—</td>
+              <td class="px-5 py-3 text-center text-accent-400">✓</td>
+            </tr>
+            <tr class="border-t border-white/5">
+              <td class="px-5 py-3 font-medium">Coût total</td>
+              <td class="px-5 py-3 text-center text-accent-400 font-semibold">49 €/mois</td>
+              <td class="px-5 py-3 text-center text-slate-500">39 $/mois</td>
+              <td class="px-5 py-3 text-center text-slate-500">Gratuit · temps perdu</td>
+              <td class="px-5 py-3 text-center text-slate-500">1 500 — 5 000 €</td>
+            </tr>
           </tbody>
         </table>
-      </div>
-
-      <!-- MOBILE : cards stackées -->
-      <div class="md:hidden divide-y divide-white/5">
-        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Temps de mise en ligne</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">5 min</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">15-30 min</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">1-2 semaines</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">2-4 semaines</span></div></div></div>
-        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Boutique adaptée à ton marché</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗ anglais</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">~</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-accent-400">✓</span></div></div></div>
-        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Pages légales incluses</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓ inclus</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">À faire</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">+ devis</span></div></div></div>
-        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Sections éditables après build</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓ libre</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">~ limité</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-accent-400">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">Verrouillé</span></div></div></div>
-        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Boutique 100% unique</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗ templates</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-accent-400">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-accent-400">✓</span></div></div></div>
-        <div class="p-5"><div class="text-xs uppercase tracking-widest text-slate-500 mb-3">Support humain</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">✓</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">✗ chat IA EN</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">—</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-accent-400">✓</span></div></div></div>
-        <div class="p-5 bg-accent-500/5"><div class="text-xs uppercase tracking-widest text-accent-300 mb-3">Coût total</div><div class="space-y-2 text-sm"><div class="flex justify-between items-center"><span class="text-accent-400 font-semibold">Storegen</span><span class="text-accent-400 font-bold">49 €/mois</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Autres builders IA</span><span class="text-slate-400">39 $/mois</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Faire soi-même</span><span class="text-slate-400">Temps perdu</span></div><div class="flex justify-between items-center"><span class="text-slate-500">Agence freelance</span><span class="text-slate-400">1 500 — 5 000 €</span></div></div></div>
       </div>
     </div>
   </div>
