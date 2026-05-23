@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Storegen — Structure page produit master (winner-aligned)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif&display=swap" rel="stylesheet" />
+<style>
+  body { font-family: 'Inter', sans-serif; background: #08090B; color: #E8ECEF; }
+  .serif { font-family: 'Instrument Serif', serif; }
+  .sec { border-left: 3px solid; position: relative; }
+  .sec-sticky { border-color: #84CC16; background: rgba(132,204,22,0.12); }
+  .sec-1 { border-color: #F59E0B; background: rgba(245,158,11,0.10); }
+  .sec-2 { border-color: #EF4444; background: rgba(239,68,68,0.10); }   /* NEW Objection */
+  .sec-3 { border-color: #3B82F6; background: rgba(59,130,246,0.07); }   /* Bénéfices */
+  .sec-4 { border-color: #EC4899; background: rgba(236,72,153,0.07); }   /* Mécanisme */
+  .sec-5 { border-color: #14B8A6; background: rgba(20,184,166,0.08); }   /* NEW Founder */
+  .sec-6 { border-color: #10B981; background: rgba(16,185,129,0.07); }   /* Bundle reframed */
+  .sec-7 { border-color: #F97316; background: rgba(249,115,22,0.08); }   /* NEW UGC Mosaic */
+  .sec-8 { border-color: #06B6D4; background: rgba(6,182,212,0.07); }    /* Comparison */
+  .sec-9 { border-color: #A855F7; background: rgba(168,85,247,0.07); }   /* FAQ */
+  .sec-10 { border-color: #84CC16; background: rgba(132,204,22,0.08); }  /* CTA Final */
+
+  .label-pill { position: absolute; top: -10px; left: 12px; padding: 2px 8px; border-radius: 9999px; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+  .new-tag { display: inline-block; margin-left: 4px; padding: 1px 5px; background: #A3E635; color: #08090B; font-size: 8px; border-radius: 3px; font-weight: 700; letter-spacing: 0.05em; }
+  .badge-data { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; background: rgba(132,204,22,0.15); color: #A3E635; }
+</style>
+</head>
+<body class="antialiased">
+
+<header class="border-b border-white/10 sticky top-0 z-50" style="background: rgba(8,9,11,0.95);">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 22px; letter-spacing: -0.03em; line-height: 1;">store<span style="color: #F59E0B;">gen.</span></span>
+      <div>
+        <div class="text-sm font-semibold">Storegen — Wireframe v2</div>
+        <div class="text-xs text-slate-500">Structure page produit master · winner-aligned</div>
+      </div>
+    </div>
+    <a href="index.html" class="text-xs text-slate-400 hover:text-white">← Retour à la LP</a>
+  </div>
+</header>
+
+<section class="max-w-5xl mx-auto px-6 py-12">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300 mb-4">
+    📋 Document interne · Pour ta compréhension de la structure
+  </div>
+  <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
+    Structure <span class="serif italic text-lime-400">page produit master</span>
+  </h1>
+  <p class="text-slate-400 text-lg leading-relaxed max-w-3xl mb-4">
+    Ce wireframe est <b>pour toi</b>, pas pour les clients. Tes utilisateurs verront uniquement
+    la boutique générée (sans les labels colorés, les annotations, les blocs "règles d'or" ou
+    "questions onboarding"). Ces annotations servent juste à documenter ce que l'outil construit.
+  </p>
+  <p class="text-slate-400 text-lg leading-relaxed max-w-3xl mb-4">
+    La structure des 11 sections (mobile + desktop) est basée sur l'analyse de vrais winners DTC :
+    Ritual, Loop, BlendJet, Liquid Death, Olipop, + research Baymard / Spiegel / CXL.
+  </p>
+  <div class="mt-6 flex flex-wrap gap-2 text-xs">
+    <span class="badge-data">Single-barrier focus</span>
+    <span class="badge-data">Sensory copy</span>
+    <span class="badge-data">Founder voice bloc</span>
+    <span class="badge-data">Bundle as ritual</span>
+    <span class="badge-data">Avis adaptés à l'avatar produit</span>
+  </div>
+
+  <div class="mt-8 rounded-2xl border border-amber-500/20 bg-amber-500/5 p-5 text-sm text-slate-300 leading-relaxed">
+    <div class="flex items-start gap-3">
+      <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
+      <div>
+        <div class="text-white font-semibold mb-1">Règles d'or non-négociables</div>
+        <ul class="space-y-1 text-[13px]">
+          <li>· Chaque section s'<b>adapte à la niche</b> (icônes, copy, palette, photographie)</li>
+          <li>· La copy de l'avatar review s'<b>adapte au public cible du produit</b> cloné (pas générique)</li>
+          <li>· Les badges livraison/paiement <b>reflètent les réglages Shopify réels</b> du user (pas hardcodés)</li>
+          <li>· Toutes les sections sont en <b>Online Store 2.0</b> (éditables dans Shopify, drag&amp;drop, customisables)</li>
+          <li>· Compatible avec <b>tout app Shopify</b> (Klaviyo, Loox, Vitals, Judge.me, etc. peuvent s'intégrer)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ONBOARDING QUESTIONS -->
+  <div class="mt-4 rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 text-sm text-slate-300 leading-relaxed">
+    <div class="flex items-start gap-3">
+      <svg class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+      <div class="flex-1">
+        <div class="text-white font-semibold mb-2">Questions posées au user avant le build (formulaire onboarding)</div>
+        <ul class="space-y-1.5 text-[13px]">
+          <li>📦 <b>Délais d'expédition</b> : 48-72h (défaut) · 1-3 jours · personnalisé</li>
+          <li>🚚 <b>Délai de livraison estimé</b> : 7-12 jours (défaut dropshipping) · 2-5j · personnalisé</li>
+          <li>🛡 <b>Garantie</b> : 14 jours satisfait/remboursé (défaut légal FR) · 30j · 60j · 90j</li>
+          <li>💳 <b>Moyens de paiement</b> : Visa · MasterCard · PayPal · Apple Pay · Klarna (checkboxes)</li>
+          <li>🚚 <b>Seuil livraison offerte</b> : optionnel (input €) — affiché en header si rempli</li>
+          <li>🎁 <b>Promo en cours</b> : optionnel (texte + dates) — affichée en header si remplie</li>
+          <li>📝 <b>Consentement scraping avis du concurrent</b> : <b>obligatoire</b>, l'utilisateur certifie avoir le droit de réutiliser les avis sous sa responsabilité (transfert de risque légal)</li>
+        </ul>
+        <div class="text-[12px] text-slate-500 italic mt-3">→ Toutes ces réponses alimentent les CGV, les pages légales, le footer, les badges du hero produit, et la section avis.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 pb-20">
+  <div class="grid lg:grid-cols-2 gap-12">
+
+    <!-- ═══════════════════ MOBILE ═══════════════════ -->
+    <div>
+      <div class="flex items-center gap-3 mb-6">
+        <svg class="w-5 h-5 text-lime-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+        <h2 class="text-2xl font-semibold">Mobile — 375px</h2>
+      </div>
+
+      <div class="mx-auto" style="max-width: 375px; border: 8px solid #1F252E; border-radius: 28px; overflow: visible; padding-top: 14px;">
+
+        <!-- 0. HEADER GLOBAL (announcement bar + nav) -->
+        <div class="sec sec-sticky px-3 py-2 text-center" style="border-color: #06B6D4; background: rgba(6,182,212,0.10);">
+          <span class="label-pill bg-cyan-500 text-black">0 · HEADER</span>
+          <!-- Announcement bar (conditionnel : si promo OU livraison configurée) -->
+          <div class="mt-2 text-[9px] text-cyan-200 font-bold uppercase tracking-wider">🎁 -30% jusqu'à dimanche · 🚚 Livraison offerte dès 50€</div>
+          <!-- Nav simplifiée -->
+          <div class="mt-2 flex items-center justify-between text-[10px]">
+            <div class="text-slate-400">☰</div>
+            <div class="font-bold text-white">[LOGO]</div>
+            <div class="flex gap-2 text-slate-400">🔍 👤 🛒</div>
+          </div>
+        </div>
+
+        <!-- 1. HERO restructured: promo banner → image → reviews → title → tagline → sensory → price → bénéfices -->
+        <div class="sec sec-1 p-3">
+          <span class="label-pill bg-amber-500 text-black">1 · HERO ATF</span>
+          <div class="mt-3">
+            <!-- (Promo banner DÉPLACÉE dans le HEADER global · plus de duplication ici) -->
+            <div class="aspect-[4/5] bg-gradient-to-br from-amber-900/30 to-stone-800/30 rounded-lg flex items-center justify-center text-[10px] text-slate-400 mb-3">UNE grande image lifestyle</div>
+            <div class="flex items-center gap-1 mb-2 text-[11px]"><span class="text-amber-400">★★★★★</span><span class="text-slate-400">4,8 (1 247 avis @ Instagram)</span></div>
+            <div class="text-base font-semibold mb-1">Sérum éclat 28 jours</div>
+            <div class="text-[10px] text-amber-300 uppercase tracking-widest mb-2">1 247 femmes déjà conquises</div>
+            <div class="text-[11px] serif italic text-slate-300 mb-2">"Comme un soleil sur ta peau, tous les matins."</div>
+            <div class="flex items-baseline gap-2 mb-3"><span class="text-xl font-bold">49,90 €</span><span class="text-xs text-slate-500 line-through">79,90 €</span></div>
+
+            <!-- BÉNÉFICES VERTICAL ATF (line icons branded par niche) -->
+            <div class="space-y-2.5 mb-3 p-3 rounded-lg bg-white/5 border border-white/10">
+              <div class="flex gap-2.5 items-start">
+                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+                <div>
+                  <div class="text-[11px] font-semibold text-white">Éclat visible en 4 semaines</div>
+                  <div class="text-[9px] text-slate-400 mt-0.5">Pas en 6 mois. Pas avec « patience ».</div>
+                </div>
+              </div>
+              <div class="flex gap-2.5 items-start">
+                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-3.5-2-7-5.5-7-11 0-4 3-7 7-7s7 3 7 7c0 5.5-3.5 9-7 11z M12 12c-2 0-4-2-4-4"/></svg>
+                <div>
+                  <div class="text-[11px] font-semibold text-white">12 actifs naturels bio</div>
+                  <div class="text-[9px] text-slate-400 mt-0.5">Liste complète sur le flacon. Pas de marketing.</div>
+                </div>
+              </div>
+              <div class="flex gap-2.5 items-start">
+                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2"/></svg>
+                <div>
+                  <div class="text-[11px] font-semibold text-white">2 secondes par jour</div>
+                  <div class="text-[9px] text-slate-400 mt-0.5">Le matin, sur peau propre. C'est tout.</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-[8px] text-slate-500 italic mb-3">Icônes générées selon la niche (leaf/drop/clock pour beauté · paw/heart/shield pour animaux · etc.)</div>
+
+            <div class="flex gap-1 mb-3"><div class="flex-1 py-1.5 border border-white/20 rounded text-center text-[10px]">30ml</div><div class="flex-1 py-1.5 border border-lime-400 bg-lime-500/10 text-lime-300 rounded text-center text-[10px]">50ml</div><div class="flex-1 py-1.5 border border-white/20 rounded text-center text-[10px]">100ml</div></div>
+            <button class="w-full py-3 bg-lime-500 text-black rounded font-bold text-xs">AJOUTER AU PANIER — 49,90 €</button>
+            <div class="mt-3 flex justify-around text-[9px] text-slate-400">
+              <div class="text-center">🚚<div>Livraison 48h</div></div>
+              <div class="text-center">↩️<div>Garantie 60j</div></div>
+              <div class="text-center">🔒<div>Paiement sécurisé</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. OBJECTION PRIMAIRE — NEW -->
+        <div class="sec sec-2 p-3 mt-2">
+          <span class="label-pill bg-red-500 text-white">2 · OBJECTION PRIMAIRE<span class="new-tag">NEW</span></span>
+          <div class="mt-3">
+            <div class="text-[11px] font-semibold text-red-300 mb-1">"Et si ça marche pas sur moi ?"</div>
+            <div class="text-[10px] text-slate-300 leading-relaxed mb-2">
+              9 femmes sur 10 voient une amélioration visible à 8 semaines. Si tu fais partie de l'autre 1,
+              on rembourse intégralement et tu gardes le flacon.
+            </div>
+            <div class="text-[9px] text-slate-500 italic">— Étude clinique 2 mois, panel de 234 femmes</div>
+          </div>
+        </div>
+
+        <!-- (section bénéfices détaillés supprimée — déjà couverte dans hero ATF) -->
+
+        <!-- 3. MÉCANISME -->
+        <div class="sec sec-4 p-3 mt-2">
+          <span class="label-pill bg-pink-500 text-white">3 · MÉCANISME</span>
+          <div class="text-[10px] text-slate-400 mt-2 mb-3">Comment ça marche</div>
+          <div class="space-y-2">
+            <div class="flex gap-2"><div class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-300 flex items-center justify-center text-[10px] font-bold">1</div><div class="text-[10px]">L'extrait botanique pénètre les cellules</div></div>
+            <div class="flex gap-2"><div class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-300 flex items-center justify-center text-[10px] font-bold">2</div><div class="text-[10px]">Stimule le renouvellement cellulaire</div></div>
+            <div class="flex gap-2"><div class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-300 flex items-center justify-center text-[10px] font-bold">3</div><div class="text-[10px]">Éclat visible en 28 jours</div></div>
+          </div>
+        </div>
+
+        <!-- 5. FOUNDER VOICE — NEW -->
+        <div class="sec sec-5 p-3 mt-2">
+          <span class="label-pill bg-teal-500 text-white">4 · FOUNDER VOICE<span class="new-tag">NEW</span></span>
+          <div class="mt-3 flex gap-3">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-amber-300 to-rose-400 flex-shrink-0"></div>
+            <div>
+              <div class="text-[11px] font-semibold mb-1">Camille, fondatrice</div>
+              <div class="text-[10px] text-slate-300 leading-relaxed italic">"J'ai créé ce sérum après avoir essayé 12 marques inefficaces pendant ma grossesse. Il fallait que ça marche, que ce soit propre, et que ça respecte ma peau. Le voilà."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. BUNDLE AS RITUAL — REFRAMED -->
+        <div class="sec sec-6 p-3 mt-2">
+          <span class="label-pill bg-emerald-500 text-black">5 · LE RITUEL COMPLET<span class="new-tag">REFRAMÉ</span></span>
+          <div class="mt-3 border border-emerald-500/30 bg-emerald-500/10 rounded p-3">
+            <div class="text-[11px] font-semibold mb-1">🌿 Le rituel 28 jours complet</div>
+            <div class="text-[9px] text-slate-400 mb-2">Sérum + crème nuit + masque hebdo · Pour vraiment voir le résultat</div>
+            <div class="flex items-baseline gap-2 mb-2"><span class="text-base font-bold">117 €</span><span class="text-[9px] text-slate-500 line-through">149,70 €</span><span class="text-[9px] text-emerald-400">économise 32€</span></div>
+            <button class="w-full py-2 bg-emerald-500 text-black rounded font-bold text-[10px]">CHOISIR LE RITUEL</button>
+          </div>
+        </div>
+
+        <!-- 6. AVIS (simple) -->
+        <div class="sec sec-7 p-3 mt-2">
+          <span class="label-pill bg-orange-500 text-white">6 · AVIS</span>
+          <div class="text-[9px] text-slate-500 mt-1">Avis + photos scrapés directement du concurrent (texte + images réutilisés)</div>
+          <div class="mt-3 space-y-2">
+            <div class="bg-white/5 rounded p-2"><div class="flex justify-between items-center mb-1"><span class="text-[10px] font-semibold">Marie L.</span><span class="text-amber-400 text-[9px]">★★★★★</span></div><div class="text-[10px] text-slate-300">"Bluffée par les résultats en 3 semaines. Vraiment."</div></div>
+            <div class="bg-white/5 rounded p-2"><div class="flex justify-between items-center mb-1"><span class="text-[10px] font-semibold">Sophie M.</span><span class="text-amber-400 text-[9px]">★★★★★</span></div><div class="text-[10px] text-slate-300">"Ma peau brille. Mon copain l'a remarqué tout de suite."</div></div>
+            <div class="bg-white/5 rounded p-2"><div class="flex justify-between items-center mb-1"><span class="text-[10px] font-semibold">Camille B.</span><span class="text-amber-400 text-[9px]">★★★★★</span></div><div class="text-[10px] text-slate-300">"Le produit qui change tout. Je recommande."</div></div>
+          </div>
+          <button class="w-full mt-2 py-2 border border-white/20 rounded text-[10px]">Voir tous les avis (1 247)</button>
+        </div>
+
+        <!-- 7. COMPARISON (avec logo concurrent) -->
+        <div class="sec sec-8 p-3 mt-2">
+          <span class="label-pill bg-cyan-500 text-black">7 · COMPARISON</span>
+          <div class="text-[9px] text-slate-500 mt-1">Logos concurrents scrapés ou IA-générés · critères adaptés au produit</div>
+          <div class="mt-3 text-[9px]">
+            <div class="grid grid-cols-4 gap-1 mb-1 items-center">
+              <div></div>
+              <div class="text-center">
+                <div class="text-[8px] text-cyan-300 font-bold uppercase tracking-wider">[Logo nous]</div>
+              </div>
+              <div class="text-center">
+                <div class="text-[8px] text-slate-400 font-semibold uppercase tracking-wider opacity-60">[Logo X]</div>
+              </div>
+              <div class="text-center">
+                <div class="text-[8px] text-slate-400 font-semibold uppercase tracking-wider opacity-60">[Logo Y]</div>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 gap-1 py-1 border-t border-white/10"><div>Actifs naturels</div><div class="text-center text-amber-400">✓</div><div class="text-center text-slate-600">✗</div><div class="text-center text-slate-600">~</div></div>
+            <div class="grid grid-cols-4 gap-1 py-1 border-t border-white/10"><div>Prix</div><div class="text-center text-amber-400">49€</div><div class="text-center text-slate-500">120€</div><div class="text-center text-slate-500">65€</div></div>
+            <div class="grid grid-cols-4 gap-1 py-1 border-t border-white/10"><div>Résultats 28j</div><div class="text-center text-amber-400">✓</div><div class="text-center text-slate-600">✗</div><div class="text-center text-slate-600">~</div></div>
+          </div>
+        </div>
+
+        <!-- 9. FAQ -->
+        <div class="sec sec-9 p-3 mt-2">
+          <span class="label-pill bg-purple-500 text-white">8 · FAQ</span>
+          <div class="mt-3 space-y-1">
+            <div class="border-b border-white/10 py-2 flex justify-between items-center"><span class="text-[10px]">Convient peau sensible / grossesse ?</span><span class="text-slate-500">+</span></div>
+            <div class="border-b border-white/10 py-2 flex justify-between items-center"><span class="text-[10px]">Délai de livraison France ?</span><span class="text-slate-500">+</span></div>
+            <div class="border-b border-white/10 py-2 flex justify-between items-center"><span class="text-[10px]">Remboursement si pas satisfaite ?</span><span class="text-slate-500">+</span></div>
+            <div class="border-b border-white/10 py-2 flex justify-between items-center"><span class="text-[10px]">Ingrédients complets (INCI) ?</span><span class="text-slate-500">+</span></div>
+            <div class="border-b border-white/10 py-2 flex justify-between items-center"><span class="text-[10px]">Combien de temps un flacon ?</span><span class="text-slate-500">+</span></div>
+          </div>
+        </div>
+
+        <!-- 10. CTA FINAL -->
+        <div class="sec sec-10 p-3 mt-2">
+          <span class="label-pill bg-lime-500 text-black">9 · CTA FINAL</span>
+          <div class="mt-3 text-center">
+            <div class="text-sm font-semibold mb-2">Prête à révéler ton éclat ?</div>
+            <button class="w-full py-3 bg-lime-500 text-black rounded font-bold text-xs">COMMANDER — 49,90 €</button>
+            <div class="text-[9px] text-slate-500 mt-2">🚚 Livraison 48h · ↩ Garantie 60j · 🔒 Sécurisé</div>
+          </div>
+        </div>
+
+        <!-- FOOTER MOBILE -->
+        <div class="sec sec-1 p-3 mt-2 opacity-90" style="background: rgba(255,255,255,0.02); border-left-color: #94A3B8;">
+          <span class="label-pill bg-slate-500 text-white">10 · FOOTER</span>
+          <div class="mt-3 text-[10px] text-slate-400">
+            <div class="border-b border-white/10 pb-3 mb-3">
+              <div class="font-semibold text-white text-[11px] mb-1">📧 Reçois nos exclus</div>
+              <div class="flex gap-1"><input class="flex-1 bg-white/5 border border-white/10 rounded px-2 py-1.5 text-[9px]" placeholder="ton@email.com"/><button class="px-2 bg-amber-500 text-black rounded text-[9px] font-bold">OK</button></div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 mb-3">
+              <div><div class="text-white font-semibold text-[9px] mb-1">Boutique</div><div class="space-y-0.5"><div>Tous les produits</div><div>Nouveautés</div><div>Cartes cadeaux</div></div></div>
+              <div><div class="text-white font-semibold text-[9px] mb-1">Aide</div><div class="space-y-0.5"><div>Livraison</div><div>Retours</div><div>Contact</div></div></div>
+            </div>
+            <div class="flex items-center justify-between pt-3 border-t border-white/10">
+              <div class="flex gap-1.5 text-[8px]"><span>Visa</span><span>·</span><span>MC</span><span>·</span><span>PayPal</span><span>·</span><span>Apple Pay</span></div>
+            </div>
+            <div class="text-[8px] text-center text-slate-600 mt-2">© 2026 Marque · CGV · Mentions · Privacy</div>
+          </div>
+        </div>
+
+        <!-- STICKY BOTTOM ATC (permanent en scroll mobile réel) -->
+        <div class="mt-4 rounded-xl border-2 border-amber-400/60 bg-gradient-to-b from-amber-500/10 to-amber-500/5 px-3 py-2 relative">
+          <span class="label-pill bg-amber-500 text-black">∞ · STICKY BOTTOM ATC</span>
+          <div class="text-[8px] text-amber-300 italic mt-2 mb-2">En mobile réel : RESTE collée en bas du viewport pendant tout le scroll de la page.</div>
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-white/10 rounded"></div>
+            <div class="flex-1">
+              <div class="text-[10px] font-semibold">Sérum éclat 28j</div>
+              <div class="text-[9px] text-slate-400">49,90 €</div>
+            </div>
+            <button class="px-3 py-2 bg-amber-500 text-black rounded font-bold text-[10px]">AJOUTER</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════ DESKTOP ═══════════════════ -->
+    <div>
+      <div class="flex items-center gap-3 mb-6">
+        <svg class="w-5 h-5 text-lime-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><line x1="8" y1="22" x2="16" y2="22"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+        <h2 class="text-2xl font-semibold">Desktop — 1280px+</h2>
+      </div>
+
+      <div style="border: 8px solid #1F252E; border-radius: 12px; overflow: visible; padding-top: 14px;">
+
+        <!-- 0. HEADER GLOBAL DESKTOP (announcement bar + nav) -->
+        <div class="sec px-4 py-2" style="border-left-color: #06B6D4; background: rgba(6,182,212,0.10); position: relative;">
+          <span class="label-pill bg-cyan-500 text-black">0 · HEADER</span>
+          <!-- Announcement bar (conditionnel) -->
+          <div class="text-center pb-2 text-[10px] text-cyan-200 font-bold uppercase tracking-wider">🎁 -30% jusqu'à dimanche · 🚚 Livraison offerte dès 50€ · ⏰ Plus que 12h</div>
+          <!-- Nav -->
+          <div class="flex items-center justify-between pt-2 border-t border-cyan-500/20 text-[11px]">
+            <div class="flex items-center gap-4">
+              <div class="font-bold text-white text-sm">[LOGO]</div>
+              <div class="flex gap-3 text-slate-400">
+                <span>Boutique</span><span>Bénéfices</span><span>Avis</span><span>Contact</span>
+              </div>
+            </div>
+            <div class="flex gap-3 text-slate-400">
+              <span>🔍</span><span>👤</span><span>🛒 (0)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. HERO desktop restructured: promo banner → image | infos avec reviews → title → tagline → sensory → price → bénéfices -->
+        <div class="sec sec-1 p-4">
+          <span class="label-pill bg-amber-500 text-black">1 · HERO ATF</span>
+          <!-- (Promo banner DÉPLACÉE dans le HEADER global · plus de duplication ici) -->
+          <div class="mt-3 grid grid-cols-2 gap-4">
+            <div class="aspect-[4/5] bg-gradient-to-br from-amber-900/30 to-stone-800/30 rounded flex items-center justify-center text-[10px] text-slate-500">UNE grande image lifestyle (pas 5 thumbnails)</div>
+            <div class="flex flex-col justify-center">
+              <div class="flex items-center gap-2 mb-2 text-[11px]"><span class="text-amber-400">★★★★★</span><span class="text-slate-400">4,8 · 1 247 avis @ Instagram</span></div>
+              <div class="text-lg font-semibold mb-2">Sérum éclat 28 jours</div>
+              <div class="text-[10px] text-amber-300 uppercase tracking-widest mb-3">1 247 femmes déjà conquises</div>
+              <div class="text-sm serif italic text-slate-300 mb-3">"Comme un soleil sur ta peau, tous les matins."</div>
+              <div class="flex items-baseline gap-2 mb-3"><span class="text-2xl font-bold">49,90 €</span><span class="text-xs text-slate-500 line-through">79,90 €</span></div>
+
+              <!-- BÉNÉFICES VERTICAL ATF desktop (line icons branded par niche) -->
+              <div class="space-y-3 mb-3 p-4 rounded-lg bg-white/5 border border-white/10">
+                <div class="flex gap-3 items-start">
+                  <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+                  <div>
+                    <div class="text-xs font-semibold text-white">Éclat visible en 4 semaines</div>
+                    <div class="text-[10px] text-slate-400 mt-0.5">Pas en 6 mois. Pas avec « patience ».</div>
+                  </div>
+                </div>
+                <div class="flex gap-3 items-start">
+                  <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-3.5-2-7-5.5-7-11 0-4 3-7 7-7s7 3 7 7c0 5.5-3.5 9-7 11z M12 12c-2 0-4-2-4-4"/></svg>
+                  <div>
+                    <div class="text-xs font-semibold text-white">12 actifs naturels bio</div>
+                    <div class="text-[10px] text-slate-400 mt-0.5">Liste complète sur le flacon. Pas de marketing.</div>
+                  </div>
+                </div>
+                <div class="flex gap-3 items-start">
+                  <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2"/></svg>
+                  <div>
+                    <div class="text-xs font-semibold text-white">2 secondes par jour</div>
+                    <div class="text-[10px] text-slate-400 mt-0.5">Le matin, sur peau propre. C'est tout.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-[9px] text-slate-500 italic mb-3">Icônes générées selon la niche (leaf/drop/clock pour beauté · paw/heart/shield pour animaux · etc.)</div>
+
+              <div class="flex gap-1 mb-3"><div class="flex-1 py-1.5 border border-white/20 rounded text-center text-[10px]">30ml</div><div class="flex-1 py-1.5 border border-lime-400 bg-lime-500/10 text-lime-300 rounded text-center text-[10px]">50ml</div><div class="flex-1 py-1.5 border border-white/20 rounded text-center text-[10px]">100ml</div></div>
+              <button class="w-full py-3 bg-lime-500 text-black rounded font-bold text-xs mb-2">AJOUTER AU PANIER</button>
+              <div class="flex justify-around text-[9px] text-slate-400 py-2 border-t border-white/10">
+                <div>🚚 Livraison 48h</div><div>↩ Garantie 60j</div><div>🔒 Sécurisé</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. OBJECTION PRIMAIRE NEW -->
+        <div class="sec sec-2 p-4 mt-2">
+          <span class="label-pill bg-red-500 text-white">2 · OBJECTION PRIMAIRE<span class="new-tag">NEW</span></span>
+          <div class="mt-3 grid grid-cols-3 gap-4">
+            <div class="col-span-2">
+              <div class="text-base font-semibold text-red-300 mb-2">"Et si ça marche pas sur moi ?"</div>
+              <div class="text-[12px] text-slate-300 leading-relaxed">
+                9 femmes sur 10 voient une amélioration visible à 8 semaines. Si tu fais partie de l'autre 1,
+                on rembourse intégralement <b>et tu gardes le flacon</b>. Zéro risque.
+              </div>
+            </div>
+            <div class="bg-red-500/5 border border-red-500/20 rounded p-3 text-center">
+              <div class="text-2xl font-bold text-red-300">9/10</div>
+              <div class="text-[9px] text-slate-400 mt-1">amélioration<br>visible</div>
+              <div class="text-[8px] text-slate-500 italic mt-1">étude 234 femmes</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- (section bénéfices détaillés supprimée — déjà couverte dans hero ATF) -->
+
+        <!-- 3. MÉCANISME -->
+        <div class="sec sec-4 p-4 mt-2">
+          <span class="label-pill bg-pink-500 text-white">3 · MÉCANISME (3 étapes)</span>
+          <div class="mt-3 grid grid-cols-3 gap-3 text-[10px]">
+            <div class="text-center"><div class="w-7 h-7 mx-auto mb-2 rounded-full bg-pink-500/20 text-pink-300 flex items-center justify-center font-bold">1</div>L'extrait botanique pénètre les cellules</div>
+            <div class="text-center"><div class="w-7 h-7 mx-auto mb-2 rounded-full bg-pink-500/20 text-pink-300 flex items-center justify-center font-bold">2</div>Stimule le renouvellement cellulaire</div>
+            <div class="text-center"><div class="w-7 h-7 mx-auto mb-2 rounded-full bg-pink-500/20 text-pink-300 flex items-center justify-center font-bold">3</div>Éclat visible en 28 jours</div>
+          </div>
+        </div>
+
+        <!-- 5. FOUNDER VOICE NEW -->
+        <div class="sec sec-5 p-4 mt-2">
+          <span class="label-pill bg-teal-500 text-white">4 · FOUNDER VOICE<span class="new-tag">NEW</span></span>
+          <div class="mt-3 grid grid-cols-3 gap-4">
+            <div><div class="w-32 h-32 rounded-2xl bg-gradient-to-br from-amber-300 to-rose-400"></div></div>
+            <div class="col-span-2">
+              <div class="text-xs text-slate-500 mb-1">— Camille, fondatrice</div>
+              <div class="text-base serif italic text-slate-200 leading-relaxed">"J'ai créé ce sérum après avoir essayé 12 marques inefficaces pendant ma grossesse. Il fallait que ça marche, que ce soit propre, et que ça respecte ma peau. Le voilà."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. BUNDLE AS RITUAL REFRAMED -->
+        <div class="sec sec-6 p-4 mt-2">
+          <span class="label-pill bg-emerald-500 text-black">5 · LE RITUEL COMPLET<span class="new-tag">REFRAMÉ</span></span>
+          <div class="text-[10px] text-slate-500 mt-1">Pas "Achetez 2", mais "Le rituel complet pour vraiment voir le résultat"</div>
+          <div class="mt-3 grid grid-cols-3 gap-2">
+            <div class="border border-white/10 rounded p-3 text-center text-[10px]"><div class="font-semibold mb-1">Sérum seul</div><div class="text-xl font-bold">49,90 €</div><div class="text-[9px] text-slate-500 mt-1">28 jours</div></div>
+            <div class="border-2 border-emerald-500 bg-emerald-500/10 rounded p-3 text-center text-[10px]"><div class="text-emerald-300 text-[8px] font-bold mb-1">★ LE RITUEL COMPLET</div><div class="font-semibold mb-1">Sérum + crème nuit + masque</div><div class="text-xl font-bold">117 €</div><div class="text-[9px] text-slate-500 mt-1">économise 32 €</div></div>
+            <div class="border border-white/10 rounded p-3 text-center text-[10px]"><div class="font-semibold mb-1">Pack 6 mois</div><div class="text-xl font-bold">199 €</div><div class="text-[9px] text-slate-500 mt-1">le meilleur rapport</div></div>
+          </div>
+        </div>
+
+        <!-- 6. AVIS desktop (simple) -->
+        <div class="sec sec-7 p-4 mt-2">
+          <span class="label-pill bg-orange-500 text-white">6 · AVIS</span>
+          <div class="text-[10px] text-slate-500 mt-1">Avis + photos scrapés directement du concurrent (texte + images réutilisés)</div>
+          <div class="mt-3 grid grid-cols-3 gap-3">
+            <div class="bg-white/5 rounded p-3"><div class="flex justify-between items-center mb-2"><span class="text-xs font-semibold">Marie L.</span><span class="text-amber-400 text-[10px]">★★★★★</span></div><div class="text-[11px] text-slate-300 leading-relaxed">"Bluffée par les résultats en 3 semaines. Vraiment, je suis convertie."</div></div>
+            <div class="bg-white/5 rounded p-3"><div class="flex justify-between items-center mb-2"><span class="text-xs font-semibold">Sophie M.</span><span class="text-amber-400 text-[10px]">★★★★★</span></div><div class="text-[11px] text-slate-300 leading-relaxed">"Ma peau brille enfin. Mon copain l'a remarqué dès la 2ème semaine."</div></div>
+            <div class="bg-white/5 rounded p-3"><div class="flex justify-between items-center mb-2"><span class="text-xs font-semibold">Camille B.</span><span class="text-amber-400 text-[10px]">★★★★★</span></div><div class="text-[11px] text-slate-300 leading-relaxed">"Le produit qui change tout. Je recommande à toutes mes amies."</div></div>
+          </div>
+          <div class="mt-3 flex items-center justify-center gap-4 text-[10px] text-slate-500">
+            <span>1 247 avis vérifiés</span><span>·</span><span>★ 4,8 / 5</span><span>·</span><span class="text-amber-400 cursor-pointer">Voir tous</span>
+          </div>
+        </div>
+
+        <!-- 7. COMPARISON desktop (avec logos concurrents) -->
+        <div class="sec sec-8 p-4 mt-2">
+          <span class="label-pill bg-cyan-500 text-black">7 · COMPARISON TABLE</span>
+          <div class="text-[10px] text-slate-500 mt-1">Logos concurrents scrapés ou IA-générés · critères adaptés au produit</div>
+          <div class="mt-3 text-[10px]">
+            <div class="grid grid-cols-4 gap-2 mb-2 items-center">
+              <div></div>
+              <div class="text-center"><div class="text-[10px] text-cyan-300 font-bold uppercase tracking-wider px-2 py-1 border border-cyan-300/30 rounded">[Logo nous]</div></div>
+              <div class="text-center"><div class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider px-2 py-1 border border-white/10 rounded opacity-60">[Logo Pharma]</div></div>
+              <div class="text-center"><div class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider px-2 py-1 border border-white/10 rounded opacity-60">[Logo Concurrent]</div></div>
+            </div>
+            <div class="grid grid-cols-4 gap-2 py-1.5 border-t border-white/10"><div>Actifs naturels bio</div><div class="text-center text-lime-400">✓</div><div class="text-center text-slate-600">✗</div><div class="text-center text-slate-600">~</div></div>
+            <div class="grid grid-cols-4 gap-2 py-1.5 border-t border-white/10"><div>Prix</div><div class="text-center text-lime-400 font-semibold">49 €</div><div class="text-center text-slate-500">120 €</div><div class="text-center text-slate-500">65 €</div></div>
+            <div class="grid grid-cols-4 gap-2 py-1.5 border-t border-white/10"><div>Résultats 28 jours</div><div class="text-center text-lime-400">✓</div><div class="text-center text-slate-600">✗</div><div class="text-center text-slate-600">~</div></div>
+            <div class="grid grid-cols-4 gap-2 py-1.5 border-t border-white/10"><div>Made in France</div><div class="text-center text-lime-400">✓</div><div class="text-center text-slate-600">~</div><div class="text-center text-slate-600">✗</div></div>
+            <div class="grid grid-cols-4 gap-2 py-1.5 border-t border-white/10"><div>Garantie satisfaite</div><div class="text-center text-lime-400">60j</div><div class="text-center text-slate-500">30j</div><div class="text-center text-slate-500">14j</div></div>
+          </div>
+        </div>
+
+        <!-- 9. FAQ -->
+        <div class="sec sec-9 p-4 mt-2">
+          <span class="label-pill bg-purple-500 text-white">8 · FAQ (objections vraies)</span>
+          <div class="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 text-[10px]">
+            <div class="py-2 border-b border-white/10 flex justify-between">Convient peau sensible / grossesse ?<span class="text-slate-500">+</span></div>
+            <div class="py-2 border-b border-white/10 flex justify-between">Délai de livraison France ?<span class="text-slate-500">+</span></div>
+            <div class="py-2 border-b border-white/10 flex justify-between">Remboursement si pas satisfaite ?<span class="text-slate-500">+</span></div>
+            <div class="py-2 border-b border-white/10 flex justify-between">Ingrédients complets (INCI) ?<span class="text-slate-500">+</span></div>
+            <div class="py-2 border-b border-white/10 flex justify-between">Combien de temps un flacon ?<span class="text-slate-500">+</span></div>
+            <div class="py-2 border-b border-white/10 flex justify-between">Compatible bio cosmétique ?<span class="text-slate-500">+</span></div>
+          </div>
+        </div>
+
+        <!-- 10. CTA FINAL -->
+        <div class="sec sec-10 p-6 mt-2 text-center">
+          <span class="label-pill bg-lime-500 text-black">9 · CTA FINAL</span>
+          <div class="text-lg font-semibold mb-3 mt-3">Prête à révéler ton éclat ?</div>
+          <button class="px-8 py-3 bg-lime-500 text-black rounded font-bold text-sm">COMMANDER — 49,90 €</button>
+          <div class="text-[10px] text-slate-500 mt-3">🚚 Livraison 48h · ↩ Garantie 60j · 🔒 Paiement sécurisé</div>
+        </div>
+
+        <!-- FOOTER DESKTOP -->
+        <div class="sec sec-1 p-4 mt-2 opacity-90" style="background: rgba(255,255,255,0.02); border-left-color: #94A3B8;">
+          <span class="label-pill bg-slate-500 text-white">10 · FOOTER</span>
+          <div class="mt-3 grid grid-cols-5 gap-4 text-[10px] text-slate-400">
+            <div class="col-span-2 border-r border-white/10 pr-4">
+              <div class="font-semibold text-white text-xs mb-2">Reçois nos exclus 📧</div>
+              <div class="text-[9px] mb-2">Nouveautés, codes promo et inspirations directement par email.</div>
+              <div class="flex gap-1"><input class="flex-1 bg-white/5 border border-white/10 rounded px-2 py-1.5 text-[10px]" placeholder="ton@email.com"/><button class="px-3 bg-amber-500 text-black rounded text-[10px] font-bold">OK</button></div>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-[10px] mb-2">Boutique</div>
+              <div class="space-y-1 text-[10px]"><div>Tous les produits</div><div>Nouveautés</div><div>Best-sellers</div><div>Cartes cadeaux</div></div>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-[10px] mb-2">Aide</div>
+              <div class="space-y-1 text-[10px]"><div>Livraison</div><div>Retours</div><div>FAQ</div><div>Contact</div></div>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-[10px] mb-2">Légal</div>
+              <div class="space-y-1 text-[10px]"><div>CGV</div><div>Mentions légales</div><div>Confidentialité</div><div>Cookies</div></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-4 mt-4 border-t border-white/10 text-[10px] text-slate-500">
+            <div>© 2026 Marque · Made in France</div>
+            <div class="flex gap-2"><span>Visa</span><span>MC</span><span>PayPal</span><span>Apple Pay</span><span>Klarna</span></div>
+            <div class="flex gap-2"><span>IG</span><span>TT</span><span>FB</span></div>
+          </div>
+        </div>
+
+        <!-- STICKY SIDE-RAIL DESKTOP -->
+        <div class="mt-4 rounded-xl border-2 border-amber-400/60 bg-gradient-to-b from-amber-500/10 to-amber-500/5 px-4 py-3 relative">
+          <span class="label-pill bg-amber-500 text-black">∞ · STICKY ATC</span>
+          <div class="mt-2 text-[10px] text-amber-300 italic">En desktop réel : <b>side-rail fixe à droite</b> pendant le scroll. En mobile : <b>barre permanente en bas</b>.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DATA TABLE -->
+<section class="max-w-5xl mx-auto px-6 pb-20">
+  <h2 class="text-2xl font-semibold mb-6">Les 5 patterns ajoutés vs wireframe v1</h2>
+  <div class="overflow-x-auto rounded-2xl border border-white/10">
+    <table class="w-full text-sm">
+      <thead class="bg-ink-900/60">
+        <tr class="text-left">
+          <th class="px-4 py-3 font-semibold">#</th>
+          <th class="px-4 py-3 font-semibold">Pattern ajouté</th>
+          <th class="px-4 py-3 font-semibold">Inspiration</th>
+          <th class="px-4 py-3 font-semibold">Pourquoi ça convertit</th>
+        </tr>
+      </thead>
+      <tbody class="text-slate-300">
+        <tr class="border-t border-white/5"><td class="px-4 py-3 font-bold text-red-400">2</td><td class="px-4 py-3">Objection primaire attaquée</td><td class="px-4 py-3 text-slate-500">Liquid Death, Spanx, Ritual</td><td class="px-4 py-3">Single-barrier focus : démolir UNE peur centrale plutôt que 11 sections diluées</td></tr>
+        <tr class="border-t border-white/5"><td class="px-4 py-3 font-bold text-amber-400">1</td><td class="px-4 py-3">Hero "1 big shot" + sensory copy</td><td class="px-4 py-3 text-slate-500">Brooklinen, Loop, Vacation</td><td class="px-4 py-3">"Comme un soleil..." &gt; spec sheet. Une seule image dominante &gt; 5 thumbnails.</td></tr>
+        <tr class="border-t border-white/5"><td class="px-4 py-3 font-bold text-teal-400">5</td><td class="px-4 py-3">Founder voice bloc</td><td class="px-4 py-3 text-slate-500">MHIGrowth research 2026</td><td class="px-4 py-3">Authenticité fondateur = différenciation #1 vs DTC uniforme</td></tr>
+        <tr class="border-t border-white/5"><td class="px-4 py-3 font-bold text-emerald-400">6</td><td class="px-4 py-3">Bundle reframé en "rituel"</td><td class="px-4 py-3 text-slate-500">Dollar Shave Club, Ritual</td><td class="px-4 py-3">"Pour vraiment voir le résultat" &gt; "Économise 32€". Service vs transaction.</td></tr>
+        <tr class="border-t border-white/5"><td class="px-4 py-3 font-bold text-orange-400">7</td><td class="px-4 py-3">UGC mosaic full-width</td><td class="px-4 py-3 text-slate-500">Rare Beauty, Glossier</td><td class="px-4 py-3">Vraies clientes + @ Instagram visibles = 10x plus convertissant que "Marie L. ★★★★★"</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer class="border-t border-white/5 mt-10">
+  <div class="max-w-7xl mx-auto px-6 py-6 text-center text-xs text-slate-500">
+    Wireframe Storegen v2 — Structure page produit winner-aligned
+  </div>
+</footer>
+
+</body>
+</html>

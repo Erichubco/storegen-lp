@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Storegen — Wordmark variations</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=clash-display@500,600,700&display=swap" rel="stylesheet" />
+<style>
+  body { background: #08090B; color: #E8ECEF; font-family: 'Satoshi', sans-serif; }
+  .card { background: #0E1014; border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 48px 32px; text-align: center; }
+  .nav-test { background: #0E1014; border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 12px 20px; }
+  .mark-l { font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 64px; letter-spacing: -0.04em; line-height: 1; }
+  .mark-n { font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 22px; letter-spacing: -0.03em; line-height: 1; }
+  .amber { color: #F59E0B; }
+</style>
+</head>
+<body class="antialiased">
+
+<div class="max-w-7xl mx-auto px-6 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300 mb-4">
+      🎨 Variations storegen · choisis ton préféré
+    </div>
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">
+      6 versions du wordmark <span class="italic text-amber-400" style="font-family: 'Instrument Serif', serif;">storegen</span>
+    </h1>
+    <p class="text-slate-400 mt-3">Tous en CSS pur, prêts à utiliser dans le site.</p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+
+    <!-- Version 0 - ACTUELLE -->
+    <div class="card" style="border-color: rgba(245,158,11,0.4);">
+      <div class="mark-l">storegen<span class="amber">.</span></div>
+      <div class="text-xs text-slate-500 mt-3"><b class="text-amber-300">0 · ACTUELLE</b> · dot amber après</div>
+      <div class="text-[10px] text-slate-600 mt-1">Simple, signature subtile</div>
+    </div>
+
+    <!-- Version A - SPLIT COLOR -->
+    <div class="card">
+      <div class="mark-l">store<span class="amber">gen<span class="amber">.</span></span></div>
+      <div class="text-xs text-slate-500 mt-3"><b class="text-amber-300">A · SPLIT amber</b> · "store" blanc + "gen." amber</div>
+      <div class="text-[10px] text-slate-600 mt-1">Souligne l'angle IA / generation</div>
+    </div>
+
+    <!-- Version B - SLASH -->
+    <div class="card">
+      <div class="mark-l">storegen<span class="amber">/</span></div>
+      <div class="text-xs text-slate-500 mt-3"><b class="text-amber-300">B · SLASH</b> · style URL path</div>
+      <div class="text-[10px] text-slate-600 mt-1">Tech-coded, sonne dev tool</div>
+    </div>
+
+    <!-- Version C - DOT MIDDLE -->
+    <div class="card">
+      <div class="mark-l">store<span class="amber">·</span>gen</div>
+      <div class="text-xs text-slate-500 mt-3"><b class="text-amber-300">C · DOT MIDDLE</b> · sépare visuellement</div>
+      <div class="text-[10px] text-slate-600 mt-1">Modulaire, design-aware</div>
+    </div>
+
+    <!-- Version D - INITIALES seules -->
+    <div class="card">
+      <div class="mark-l">sg<span class="amber">.</span></div>
+      <div class="text-xs text-slate-500 mt-3"><b class="text-amber-300">D · INITIALES sg.</b> · pour favicon / app icon</div>
+      <div class="text-[10px] text-slate-600 mt-1">Ultra court (à utiliser à côté du wordmark complet)</div>
+    </div>
+
+    <!-- Version E - UPPERCASE WIDE -->
+    <div class="card">
+      <div style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 40px; letter-spacing: 0.08em; line-height: 1;">STOREGEN<span class="amber">.</span></div>
+      <div class="text-xs text-slate-500 mt-3"><b class="text-amber-300">E · UPPERCASE wide</b> · spacing aéré</div>
+      <div class="text-[10px] text-slate-600 mt-1">Fashion brand vibe, plus "luxury"</div>
+    </div>
+  </div>
+
+  <!-- TEST EN NAVBAR (taille réelle) -->
+  <div class="mt-12">
+    <h2 class="text-xl font-semibold mb-6 text-center">Test en navbar (taille réelle)</h2>
+    <div class="space-y-3">
+      <div class="nav-test flex items-center justify-between">
+        <div class="mark-n">storegen<span class="amber">.</span></div>
+        <span class="text-xs text-slate-500">0 · Actuelle</span>
+      </div>
+      <div class="nav-test flex items-center justify-between">
+        <div class="mark-n">store<span class="amber">gen<span class="amber">.</span></span></div>
+        <span class="text-xs text-slate-500">A · Split amber</span>
+      </div>
+      <div class="nav-test flex items-center justify-between">
+        <div class="mark-n">storegen<span class="amber">/</span></div>
+        <span class="text-xs text-slate-500">B · Slash</span>
+      </div>
+      <div class="nav-test flex items-center justify-between">
+        <div class="mark-n">store<span class="amber">·</span>gen</div>
+        <span class="text-xs text-slate-500">C · Dot middle</span>
+      </div>
+      <div class="nav-test flex items-center justify-between">
+        <div class="mark-n">sg<span class="amber">.</span></div>
+        <span class="text-xs text-slate-500">D · sg. initiales</span>
+      </div>
+      <div class="nav-test flex items-center justify-between">
+        <div style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 14px; letter-spacing: 0.12em; line-height: 1;">STOREGEN<span class="amber">.</span></div>
+        <span class="text-xs text-slate-500">E · STOREGEN wide</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERNATIONAL TEST -->
+  <div class="mt-16 grid md:grid-cols-2 gap-6">
+    <div class="card">
+      <div class="text-xs text-slate-500 mb-3 uppercase tracking-widest">FR</div>
+      <div class="mark-l mb-3">store<span class="amber">gen<span class="amber">.</span></span></div>
+      <div class="text-sm text-slate-300">"Ta boutique e-commerce. En 5 minutes."</div>
+    </div>
+    <div class="card">
+      <div class="text-xs text-slate-500 mb-3 uppercase tracking-widest">EN</div>
+      <div class="mark-l mb-3">store<span class="amber">gen<span class="amber">.</span></span></div>
+      <div class="text-sm text-slate-300">"Your e-commerce store. In 5 minutes."</div>
+    </div>
+  </div>
+
+  <!-- MA RECO -->
+  <div class="mt-12 rounded-2xl border border-amber-500/20 bg-amber-500/5 p-6">
+    <div class="font-semibold text-amber-300 mb-3">🎯 Ma reco</div>
+    <p class="text-sm text-slate-300 leading-relaxed">
+      → <b>Version A (split amber)</b> : <b class="text-white">store</b><span class="amber font-bold">gen.</span><br/>
+      <span class="text-slate-400">
+      Garde la simplicité du wordmark actuel mais souligne l'angle IA/génération en mettant "gen." en amber.
+      Le visiteur comprend instantanément le concept (store + AI gen). Marche identique en FR et EN.
+      </span>
+    </p>
+    <p class="text-xs text-slate-500 mt-3">
+      Si tu veux plus original : <b>C · store·gen</b> (séparateur dot au milieu) est très brandable et unique.
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

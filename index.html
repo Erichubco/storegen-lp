@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Boutik — Ta boutique Shopify française en 5 minutes</title>
+<meta name="description" content="Colle l'URL d'un produit qui marche. L'IA construit ta boutique Shopify en français en 5 minutes. Sans coder, sans designer." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+          serif: ['Instrument Serif', 'Georgia', 'serif'],
+        },
+        colors: {
+          ink: { 950: '#08090B', 900: '#0E1014', 800: '#161A20', 700: '#1F252E', 600: '#2A323D' },
+          accent: { 400: '#A3E635', 500: '#84CC16', 600: '#65A30D' },
+        },
+        keyframes: {
+          glow: { '0%,100%': { opacity: 0.5 }, '50%': { opacity: 1 } },
+          slide: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
+        },
+        animation: {
+          glow: 'glow 4s ease-in-out infinite',
+          slide: 'slide 30s linear infinite',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; background: #08090B; color: #E8ECEF; }
+  .serif { font-family: 'Instrument Serif', serif; font-weight: 400; }
+  .gradient-text { background: linear-gradient(180deg, #FFFFFF 30%, #94A3B8 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .grain { position: relative; }
+  .grain::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .glow-orb { position: absolute; border-radius: 9999px; filter: blur(80px); opacity: 0.4; pointer-events: none; }
+  .card-border {
+    background: linear-gradient(#0E1014, #0E1014) padding-box, linear-gradient(135deg, rgba(163,230,53,0.4), rgba(163,230,53,0.05)) border-box;
+    border: 1px solid transparent;
+  }
+  details[open] summary .chev { transform: rotate(180deg); }
+  .chev { transition: transform .2s; }
+  .marquee { mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+</style>
+</head>
+<body class="grain antialiased">
+
+<!-- NAV -->
+<header class="relative z-20">
+  <nav class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <div class="w-8 h-8 rounded-lg bg-white p-1 flex items-center justify-center overflow-hidden">
+        <img src="assets/logo.png" alt="Boutik" class="w-full h-full object-contain" />
+      </div>
+      <span class="font-semibold text-lg tracking-tight">Boutik</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm text-slate-400">
+      <a href="#styles" class="hover:text-white transition">Styles</a>
+      <a href="#comment-ca-marche" class="hover:text-white transition">Comment ça marche</a>
+      <a href="#avis" class="hover:text-white transition">Avis</a>
+      <a href="#pricing" class="hover:text-white transition">Tarifs</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="#" class="hidden sm:inline text-sm text-slate-400 hover:text-white transition">Connexion</a>
+      <a href="#hero-input" class="px-4 py-2 rounded-lg bg-white text-ink-950 text-sm font-medium hover:bg-slate-200 transition">Commencer</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="relative overflow-hidden">
+  <div class="glow-orb bg-accent-500 w-[500px] h-[500px] -top-40 -left-32"></div>
+  <div class="glow-orb bg-emerald-500 w-[400px] h-[400px] top-20 right-0 opacity-20"></div>
+
+  <div class="relative max-w-5xl mx-auto px-6 pt-20 pb-12 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-slate-300 mb-8">
+      <span class="w-1.5 h-1.5 rounded-full bg-accent-400 animate-glow"></span>
+      Accès anticipé · 500 premières places
+    </div>
+
+    <h1 class="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05] mb-6">
+      <span class="gradient-text">Ta boutique Shopify</span><br/>
+      <span class="serif italic text-accent-400">en français</span>,
+      <span class="gradient-text">en 5 minutes.</span>
+    </h1>
+
+    <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+      Tu colles l'URL d'un produit qui cartonne, en France ou ailleurs.
+      Tu repars avec une boutique propre, brandée, prête à recevoir du trafic.
+    </p>
+
+    <!-- URL INPUT -->
+    <form id="hero-input" class="max-w-xl mx-auto mb-6">
+      <div class="flex flex-col sm:flex-row gap-2 p-2 rounded-2xl bg-ink-900/80 border border-white/10 backdrop-blur shadow-[0_0_40px_rgba(163,230,53,0.08)]">
+        <div class="flex items-center gap-2 px-3 flex-1">
+          <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          <input type="url" placeholder="https://winning-store.com/products/..." class="flex-1 bg-transparent outline-none text-base placeholder:text-slate-600 py-2"/>
+        </div>
+        <button type="button" class="px-6 py-3 rounded-xl bg-accent-500 text-ink-950 font-medium text-base hover:bg-accent-400 transition whitespace-nowrap">
+          Construire ma boutique →
+        </button>
+      </div>
+    </form>
+
+    <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-slate-500">
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 5 minutes chrono</span>
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Aucune carte bancaire</span>
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> La boutique reste à toi</span>
+    </div>
+  </div>
+
+  <!-- DEMO MOCKUP -->
+  <div class="relative max-w-4xl mx-auto px-6 pb-20">
+    <div class="rounded-2xl overflow-hidden shadow-2xl shadow-accent-500/10 ring-1 ring-white/10">
+      <img src="assets/preview.png" alt="Aperçu d'une boutique générée par Boutik" class="w-full h-auto block" />
+    </div>
+    <p class="text-center text-sm text-slate-500 mt-4">
+      Aperçu d'une boutique générée à partir d'une URL. Tu peux tout éditer après.
+    </p>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF MARQUEE -->
+<section class="border-y border-white/5 bg-ink-900/40 py-6 overflow-hidden">
+  <div class="marquee">
+    <div class="flex items-center gap-12 animate-slide whitespace-nowrap">
+      <div class="text-slate-500 text-sm flex items-center gap-2">⭐⭐⭐⭐⭐ <span class="text-white font-semibold">4,9 / 5</span> <span class="text-slate-500">sur 240 avis</span></div>
+      <div class="text-slate-500 text-sm">·</div>
+      <div class="text-slate-500 text-sm"><span class="text-white font-semibold">5 min 20</span> de build moyen</div>
+      <div class="text-slate-500 text-sm">·</div>
+      <div class="text-slate-500 text-sm"><span class="text-white font-semibold">100% en français</span> · CGV · RGPD</div>
+      <div class="text-slate-500 text-sm">·</div>
+      <div class="text-slate-500 text-sm"><span class="text-white font-semibold">+340</span> boutiques générées ce mois</div>
+      <div class="text-slate-500 text-sm">·</div>
+      <div class="text-slate-500 text-sm">⭐⭐⭐⭐⭐ <span class="text-white font-semibold">4,9 / 5</span> <span class="text-slate-500">sur 240 avis</span></div>
+      <div class="text-slate-500 text-sm">·</div>
+      <div class="text-slate-500 text-sm"><span class="text-white font-semibold">5 min 20</span> de build moyen</div>
+      <div class="text-slate-500 text-sm">·</div>
+      <div class="text-slate-500 text-sm"><span class="text-white font-semibold">100% en français</span> · CGV · RGPD</div>
+      <div class="text-slate-500 text-sm">·</div>
+      <div class="text-slate-500 text-sm"><span class="text-white font-semibold">+340</span> boutiques générées ce mois</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMENT ÇA MARCHE -->
+<section id="comment-ca-marche" class="relative">
+  <div class="max-w-6xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <div class="text-xs text-accent-400 uppercase tracking-widest mb-3">Comment ça marche</div>
+      <h2 class="text-4xl md:text-5xl font-semibold tracking-tight">
+        <span class="gradient-text">Trois étapes.</span> <span class="serif italic text-slate-400">Pas une de plus.</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card-border rounded-2xl p-8">
+        <div class="text-5xl serif italic text-accent-400 mb-6">01</div>
+        <h3 class="text-xl font-semibold mb-3">Connecte ta boutique Shopify</h3>
+        <p class="text-slate-400 leading-relaxed">Un clic. Pas de code. On obtient juste l'accès nécessaire — révocable à tout moment.</p>
+      </div>
+      <div class="card-border rounded-2xl p-8">
+        <div class="text-5xl serif italic text-accent-400 mb-6">02</div>
+        <h3 class="text-xl font-semibold mb-3">Colle l'URL d'un produit qui marche</h3>
+        <p class="text-slate-400 leading-relaxed">Un winner repéré aux US, en Allemagne, en France. On extrait, on traduit, on localise.</p>
+      </div>
+      <div class="card-border rounded-2xl p-8">
+        <div class="text-5xl serif italic text-accent-400 mb-6">03</div>
+        <h3 class="text-xl font-semibold mb-3">L'IA construit ta boutique</h3>
+        <p class="text-slate-400 leading-relaxed">Pages produits, homepage, copy française, design propre, pages légales. 5 minutes chrono.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STYLES GALLERY -->
+<section id="styles" class="relative bg-ink-900/40 border-y border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-24">
+    <div class="text-center mb-12">
+      <div class="text-xs text-accent-400 uppercase tracking-widest mb-3">6 styles disponibles</div>
+      <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
+        <span class="gradient-text">Ta boutique reste</span> <span class="serif italic text-accent-400">unique.</span>
+      </h2>
+      <p class="text-slate-400 max-w-2xl mx-auto">
+        6 styles · 9 palettes · génération d'images uniques.
+        Même si quelqu'un clone le même produit que toi, vos boutiques n'auront rien à voir.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="group rounded-xl overflow-hidden bg-ink-900 ring-1 ring-white/10 hover:ring-accent-500/50 transition cursor-pointer">
+        <div class="aspect-[4/3] overflow-hidden bg-ink-800"><img src="assets/styles/01-editorial-premium.png" alt="Editorial Premium" class="w-full h-full object-cover block group-hover:scale-105 transition duration-500" /></div>
+        <div class="p-4"><div class="text-sm font-semibold text-white">Editorial Premium</div><div class="text-xs text-slate-400 mt-0.5">Beauté · Mode · Maison</div></div>
+      </div>
+      <div class="group rounded-xl overflow-hidden bg-ink-900 ring-1 ring-white/10 hover:ring-accent-500/50 transition cursor-pointer">
+        <div class="aspect-[4/3] overflow-hidden bg-ink-800"><img src="assets/styles/02-clean-modern.png" alt="Clean Modern" class="w-full h-full object-cover block group-hover:scale-105 transition duration-500" /></div>
+        <div class="p-4"><div class="text-sm font-semibold text-white">Clean Modern</div><div class="text-xs text-slate-400 mt-0.5">Tech · Wellness · Supplements</div></div>
+      </div>
+      <div class="group rounded-xl overflow-hidden bg-ink-900 ring-1 ring-white/10 hover:ring-accent-500/50 transition cursor-pointer">
+        <div class="aspect-[4/3] overflow-hidden bg-ink-800"><img src="assets/styles/03-bold-statement.png" alt="Bold Statement" class="w-full h-full object-cover block group-hover:scale-105 transition duration-500" /></div>
+        <div class="p-4"><div class="text-sm font-semibold text-white">Bold Statement</div><div class="text-xs text-slate-400 mt-0.5">F&B · Fitness · Challenger</div></div>
+      </div>
+      <div class="group rounded-xl overflow-hidden bg-ink-900 ring-1 ring-white/10 hover:ring-accent-500/50 transition cursor-pointer">
+        <div class="aspect-[4/3] overflow-hidden bg-ink-800"><img src="assets/styles/04-playful-friendly.png" alt="Playful Friendly" class="w-full h-full object-cover block group-hover:scale-105 transition duration-500" /></div>
+        <div class="p-4"><div class="text-sm font-semibold text-white">Playful Friendly</div><div class="text-xs text-slate-400 mt-0.5">Animaux · Bébé · Enfants</div></div>
+      </div>
+      <div class="group rounded-xl overflow-hidden bg-ink-900 ring-1 ring-white/10 hover:ring-accent-500/50 transition cursor-pointer">
+        <div class="aspect-[4/3] overflow-hidden bg-ink-800"><img src="assets/styles/05-cinematic-ugc.png" alt="Cinematic UGC" class="w-full h-full object-cover block group-hover:scale-105 transition duration-500" /></div>
+        <div class="p-4"><div class="text-sm font-semibold text-white">Cinematic UGC</div><div class="text-xs text-slate-400 mt-0.5">Beauté virale · Problem-solver</div></div>
+      </div>
+      <div class="group rounded-xl overflow-hidden bg-ink-900 ring-1 ring-white/10 hover:ring-accent-500/50 transition cursor-pointer">
+        <div class="aspect-[4/3] overflow-hidden bg-ink-800"><img src="assets/styles/06-neo-brutalist.png" alt="Neo-Brutalist" class="w-full h-full object-cover block group-hover:scale-105 transition duration-500" /></div>
+        <div class="p-4"><div class="text-sm font-semibold text-white">Neo-Brutalist</div><div class="text-xs text-slate-400 mt-0.5">Mode challenger · Indie</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI CET OUTIL -->
+<section class="relative">
+  <div class="max-w-4xl mx-auto px-6 py-24">
+    <div class="text-center mb-12">
+      <div class="text-xs text-accent-400 uppercase tracking-widest mb-3">Pourquoi cet outil existe</div>
+      <h2 class="text-4xl md:text-5xl font-semibold tracking-tight gradient-text">
+        Ce qui bloque les débutants, c'est <span class="serif italic text-accent-400">pas</span> de trouver un produit.
+      </h2>
+    </div>
+
+    <div class="space-y-6 text-lg text-slate-300 leading-relaxed">
+      <p>C'est de construire une boutique qui ne donne pas envie de fuir.</p>
+      <p class="text-slate-400">
+        Choisir un thème, customiser des sections, écrire 4 fiches produits, adapter les pages légales au droit
+        français, nettoyer les images fournisseur, faire et refaire le menu... C'est 1 à 2 semaines de boulot
+        frustrant. La plupart abandonnent avant d'avoir lancé leur première pub.
+      </p>
+      <p class="text-white text-xl font-medium">
+        Boutik fait sauter cette étape. Tu colles une URL. Le reste se construit tout seul.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- AVANT / APRÈS -->
+<section class="relative">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <div class="text-center mb-12">
+      <div class="text-xs text-accent-400 uppercase tracking-widest mb-3">Avant / Après</div>
+      <h2 class="text-4xl md:text-5xl font-semibold tracking-tight">
+        <span class="serif italic text-slate-400">De</span> <span class="gradient-text">deux semaines</span> <span class="serif italic text-slate-400">à</span> <span class="text-accent-400">cinq minutes</span>.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border border-white/10 bg-ink-900/40 p-8">
+        <div class="flex items-center gap-2 mb-6">
+          <span class="px-2 py-0.5 rounded text-xs bg-red-500/10 text-red-300 border border-red-500/20">AVANT</span>
+          <span class="text-sm text-slate-500">tout faire à la main</span>
+        </div>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-center justify-between text-slate-300"><span>Choisir un thème et le customiser</span><span class="text-slate-500 text-sm">4 — 8 h</span></li>
+          <li class="flex items-center justify-between text-slate-300"><span>Écrire 1 fiche produit propre</span><span class="text-slate-500 text-sm">2 — 3 h</span></li>
+          <li class="flex items-center justify-between text-slate-300"><span>Adapter les pages légales FR</span><span class="text-slate-500 text-sm">1 — 2 h</span></li>
+          <li class="flex items-center justify-between text-slate-300"><span>Nettoyer les images produit</span><span class="text-slate-500 text-sm">1 — 2 h</span></li>
+          <li class="flex items-center justify-between text-slate-300"><span>Faire et refaire le menu</span><span class="text-slate-500 text-sm">1 h</span></li>
+        </ul>
+        <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+          <span class="text-slate-400">Total</span>
+          <span class="text-2xl font-semibold text-red-300">1 à 2 semaines</span>
+        </div>
+      </div>
+      <div class="rounded-2xl card-border p-8 relative overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-accent-500/20 blur-3xl"></div>
+        <div class="relative">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="px-2 py-0.5 rounded text-xs bg-accent-500/15 text-accent-400 border border-accent-500/30">APRÈS</span>
+            <span class="text-sm text-slate-500">avec Boutik</span>
+          </div>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center justify-between text-slate-300"><span>Coller l'URL d'un produit</span><span class="text-slate-500 text-sm">30 sec</span></li>
+            <li class="flex items-center justify-between text-slate-300"><span>L'IA construit ta boutique</span><span class="text-slate-500 text-sm">4 min</span></li>
+            <li class="flex items-center justify-between text-slate-300"><span>Tu valides et tu publies</span><span class="text-slate-500 text-sm">30 sec</span></li>
+            <li class="flex items-center justify-between text-slate-300 opacity-50"><span class="line-through">Customiser le thème</span><span class="text-slate-500 text-sm">déjà fait</span></li>
+            <li class="flex items-center justify-between text-slate-300 opacity-50"><span class="line-through">Écrire la copy</span><span class="text-slate-500 text-sm">déjà fait</span></li>
+          </ul>
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="text-slate-400">Total</span>
+            <span class="text-2xl font-semibold text-accent-400">5 minutes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="avis" class="relative bg-ink-900/40 border-y border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-24">
+    <div class="text-center mb-12">
+      <div class="text-xs text-accent-400 uppercase tracking-widest mb-3">Ce qu'en disent les premiers utilisateurs</div>
+      <h2 class="text-4xl md:text-5xl font-semibold tracking-tight gradient-text">
+        Ils ont arrêté de procrastiner.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="rounded-xl border border-white/10 bg-ink-900/60 p-6">
+        <div class="flex text-accent-400 text-sm mb-3">★★★★★</div>
+        <p class="text-slate-300 leading-relaxed mb-5">
+          "J'ai 8 mois sans avoir lancé ma boutique. En 1h avec Boutik j'avais ma première version live.
+          Le truc qui m'a débloqué."
+        </p>
+        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+          <div class="w-11 h-11 rounded-full overflow-hidden bg-ink-800 ring-1 ring-white/10">
+            <img src="assets/avatars/leo.png" alt="Léo M." class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <div class="text-sm font-semibold text-white">Léo M.</div>
+            <div class="text-xs text-slate-500">27 ans · Lyon</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-xl card-border p-6 relative">
+        <div class="absolute -top-3 left-6 px-2 py-0.5 rounded-full bg-accent-500 text-ink-950 text-[10px] font-semibold">COUP DE CŒUR</div>
+        <div class="flex text-accent-400 text-sm mb-3">★★★★★</div>
+        <p class="text-slate-200 leading-relaxed mb-5">
+          "J'ai cloné un winner US sur mon Shopify en 6 min. Mon mari a cru que j'avais payé une agence.
+          Première vente le 3ème jour."
+        </p>
+        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+          <div class="w-11 h-11 rounded-full overflow-hidden bg-ink-800 ring-1 ring-white/10">
+            <img src="assets/avatars/camille.png" alt="Camille B." class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <div class="text-sm font-semibold text-white">Camille B.</div>
+            <div class="text-xs text-slate-500">31 ans · Bordeaux</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-white/10 bg-ink-900/60 p-6">
+        <div class="flex text-accent-400 text-sm mb-3">★★★★★</div>
+        <p class="text-slate-300 leading-relaxed mb-5">
+          "Je voulais lancer ma boutique depuis 6 mois, j'y arrivais pas. En une après-midi
+          c'était fait. Premier acheteur la semaine d'après."
+        </p>
+        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+          <div class="w-11 h-11 rounded-full overflow-hidden bg-ink-800 ring-1 ring-white/10">
+            <img src="assets/avatars/yanis.png" alt="Yanis R." class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <div class="text-sm font-semibold text-white">Yanis R.</div>
+            <div class="text-xs text-slate-500">24 ans · Toulouse</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="relative">
+  <div class="max-w-5xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <div class="text-xs text-accent-400 uppercase tracking-widest mb-3">Tarifs</div>
+      <h2 class="text-4xl md:text-5xl font-semibold tracking-tight">
+        <span class="gradient-text">Commence gratuit.</span> <span class="serif italic text-slate-400">Tu paies quand tu en veux plus.</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <div class="rounded-2xl border border-white/10 bg-ink-900/60 p-8">
+        <div class="mb-6">
+          <div class="text-sm text-slate-400 mb-2">Essai gratuit</div>
+          <div class="flex items-baseline gap-1">
+            <span class="text-5xl font-semibold">0 €</span>
+            <span class="text-slate-500 text-sm">/ pour toujours</span>
+          </div>
+        </div>
+        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 1 boutique complète construite</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Aucune carte bancaire</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Pages légales FR incluses</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Boutique à toi à vie</li>
+        </ul>
+        <button class="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 transition text-sm font-medium">Commencer gratuitement</button>
+      </div>
+
+      <div class="rounded-2xl card-border p-8 relative">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-accent-500 text-ink-950 text-xs font-semibold">RECOMMANDÉ</div>
+        <div class="mb-6">
+          <div class="text-sm text-accent-400 mb-2">Pro</div>
+          <div class="flex items-baseline gap-1">
+            <span class="text-5xl font-semibold">49 €</span>
+            <span class="text-slate-500 text-sm">/ mois</span>
+          </div>
+        </div>
+        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Boutiques illimitées</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Régénération illimitée</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Ajouter / remplacer des produits</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Sections premium</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Support prioritaire</li>
+        </ul>
+        <button class="w-full py-3 rounded-xl bg-accent-500 text-ink-950 hover:bg-accent-400 transition text-sm font-semibold">Passer Pro</button>
+      </div>
+    </div>
+    <p class="text-center text-sm text-slate-500 mt-8">Annulable à tout moment. La boutique gratuite reste à toi à vie.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="relative bg-ink-900/40 border-y border-white/5">
+  <div class="max-w-3xl mx-auto px-6 py-24">
+    <div class="text-center mb-12">
+      <div class="text-xs text-accent-400 uppercase tracking-widest mb-3">FAQ</div>
+      <h2 class="text-4xl md:text-5xl font-semibold tracking-tight gradient-text">Les questions qu'on nous pose.</h2>
+    </div>
+
+    <div class="space-y-3">
+      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <span class="font-medium">Faut une boutique Shopify déjà existante ?</span>
+          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-4 text-slate-400 leading-relaxed">Oui. Il te faut un compte Shopify (essai 1 € le premier mois). Boutik se connecte à ta boutique pour la construire, il n'en crée pas une nouvelle à ta place.</p>
+      </details>
+      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <span class="font-medium">Et si j'ai pas encore d'URL de winner ?</span>
+          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-4 text-slate-400 leading-relaxed">On lance bientôt un feed de winners curés chaque semaine. En attendant, n'importe quelle page produit Shopify d'un concurrent fait l'affaire.</p>
+      </details>
+      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <span class="font-medium">Si je clone le même produit qu'un autre user, on aura la même boutique ?</span>
+          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-4 text-slate-400 leading-relaxed">Non. 6 styles, 9 palettes, génération d'images uniques, copy IA qui varie. Même URL = boutiques visuellement différentes, garanti.</p>
+      </details>
+      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <span class="font-medium">La boutique générée, elle est à moi ?</span>
+          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-4 text-slate-400 leading-relaxed">100 %. Tout ce qui est créé est dans ton Shopify, sous ton compte. Tu peux désinstaller Boutik quand tu veux, la boutique reste.</p>
+      </details>
+      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <span class="font-medium">Et le copyright si je clone un concurrent ?</span>
+          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-4 text-slate-400 leading-relaxed">L'IA ne recopie jamais texto. Elle analyse la structure (ce qui marche) et réécrit tout en français, avec des images régénérées propres. Ta boutique est légalement et techniquement la tienne.</p>
+      </details>
+      <details class="group rounded-xl border border-white/10 bg-ink-900/40 p-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <span class="font-medium">Mes données sont en sécurité ?</span>
+          <svg class="chev w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-4 text-slate-400 leading-relaxed">Accès temporaire à ta boutique pour la construire. Aucune donnée client n'est stockée chez nous. Tu peux révoquer l'accès dans Shopify en un clic.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="relative overflow-hidden">
+  <div class="glow-orb bg-accent-500 w-[500px] h-[500px] -bottom-40 left-1/2 -translate-x-1/2 opacity-20"></div>
+  <div class="relative max-w-3xl mx-auto px-6 py-24 text-center">
+    <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
+      <span class="gradient-text">On essaie ?</span>
+    </h2>
+    <p class="text-lg text-slate-400 mb-10">Colle l'URL d'un produit qui marche. Tu repars avec une boutique en 5 minutes.</p>
+
+    <form class="max-w-xl mx-auto mb-6">
+      <div class="flex flex-col sm:flex-row gap-2 p-2 rounded-2xl bg-ink-900/80 border border-white/10 backdrop-blur shadow-[0_0_40px_rgba(163,230,53,0.08)]">
+        <div class="flex items-center gap-2 px-3 flex-1">
+          <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          <input type="url" placeholder="https://winning-store.com/products/..." class="flex-1 bg-transparent outline-none text-base placeholder:text-slate-600 py-2"/>
+        </div>
+        <button type="button" class="px-6 py-3 rounded-xl bg-accent-500 text-ink-950 font-medium text-base hover:bg-accent-400 transition whitespace-nowrap">Construire ma boutique →</button>
+      </div>
+    </form>
+    <div class="text-sm text-slate-500">5 minutes · Aucune CB · La boutique reste à toi</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <div class="w-7 h-7 rounded-md bg-white p-1 flex items-center justify-center overflow-hidden">
+        <img src="assets/logo.png" alt="Boutik" class="w-full h-full object-contain" />
+      </div>
+      <span class="font-semibold tracking-tight">Boutik</span>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-slate-500">
+      <a href="#" class="hover:text-white transition">Mentions légales</a>
+      <a href="#" class="hover:text-white transition">CGV</a>
+      <a href="#" class="hover:text-white transition">Confidentialité</a>
+      <a href="#" class="hover:text-white transition">Contact</a>
+    </div>
+    <div class="text-xs text-slate-600">© 2026 Boutik</div>
+  </div>
+</footer>
+
+</body>
+</html>
