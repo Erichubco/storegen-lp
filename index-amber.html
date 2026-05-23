@@ -6,6 +6,8 @@
 <title>Storegen — Variante AMBER</title>
 <meta name="description" content="Colle l'URL d'un produit qui marche. L'IA construit ta boutique Shopify en français en 5 minutes. Sans coder, sans designer." />
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="icon" type="image/png" href="assets/favicon-sg.png" />
+<link rel="apple-touch-icon" href="assets/favicon-sg.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
@@ -35,6 +37,7 @@
   };
 </script>
 <style>
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
   body { font-family: 'Satoshi', 'Inter', sans-serif; background: #08090B; color: #E8ECEF; letter-spacing: -0.005em; }
   .serif { font-family: 'Instrument Serif', serif; font-weight: 400; }
   .gradient-text { background: linear-gradient(180deg, #FFFFFF 30%, #94A3B8 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
@@ -56,7 +59,7 @@
 <body class="grain antialiased">
 
 <!-- NAV -->
-<header class="relative z-20">
+<header class="relative z-50">
   <nav class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
     <a href="#" class="flex items-center gap-2">
       <span style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 26px; letter-spacing: -0.035em; line-height: 1;">store<span style="color: #F59E0B;">gen.</span></span>
@@ -70,8 +73,20 @@
     <div class="flex items-center gap-3">
       <a href="#" class="hidden sm:inline text-sm text-slate-400 hover:text-white transition">Connexion</a>
       <a href="#hero-input" class="px-4 py-2 rounded-lg bg-white text-ink-950 text-sm font-medium hover:bg-slate-200 transition">Commencer</a>
+      <button onclick="document.getElementById('mobile-nav').classList.toggle('hidden')" class="md:hidden p-2 text-slate-400 hover:text-white" aria-label="Menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
   </nav>
+  <div id="mobile-nav" class="hidden md:hidden border-t border-white/10 bg-ink-900/95 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-3 text-sm text-slate-300">
+      <a href="#styles" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="py-2 hover:text-white">Styles</a>
+      <a href="#comment-ca-marche" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="py-2 hover:text-white">Comment ça marche</a>
+      <a href="#avis" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="py-2 hover:text-white">Avis</a>
+      <a href="#pricing" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="py-2 hover:text-white">Tarifs</a>
+      <a href="#" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="py-2 hover:text-white border-t border-white/10 pt-3">Connexion</a>
+    </div>
+  </div>
 </header>
 
 <!-- HERO -->
@@ -635,8 +650,8 @@
     </div>
 
     <!-- Links grid -->
-    <div class="grid md:grid-cols-5 gap-8 mb-12">
-      <div class="md:col-span-2">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-x-6 gap-y-8 mb-12">
+      <div class="col-span-2">
         <div class="flex items-center gap-2 mb-4">
           <span style="font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: 26px; letter-spacing: -0.035em; line-height: 1;">store<span style="color: #F59E0B;">gen.</span></span>
         </div>
@@ -663,7 +678,7 @@
           <li><a href="#" class="hover:text-white transition">Affiliation Shopify</a></li>
         </ul>
       </div>
-      <div>
+      <div class="col-span-2 md:col-span-1">
         <div class="text-xs uppercase tracking-widest text-slate-500 mb-4">Légal</div>
         <ul class="space-y-2 text-sm text-slate-300">
           <li><a href="#" class="hover:text-white transition">Mentions légales</a></li>
